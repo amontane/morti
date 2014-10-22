@@ -28,7 +28,9 @@
 		if (isset($additional)) {
 			echo ('<div class="meanwhile">Mientras tanto, en la partida de rol...</div>');
 			echo ('<div class="additional-content">');
+			echo ('<ul>');
 			display_additional($additional);
+			echo ('</ul>');
 			echo ('</div>');
 		}
 	}

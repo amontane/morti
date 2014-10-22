@@ -27,7 +27,7 @@
 			if (strlen($theData) > 1) {
 				$theData = htmlspecialchars($theData);
 				//TODO: special tag detection as well...
-				echo("<p>" . $theData . "</p>\n");
+				echo("<li>" . $theData . "</li>\n");
 			}
 		}
 

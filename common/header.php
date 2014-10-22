@@ -9,6 +9,7 @@
 		<script src="../scripts/jquery-2.1.0.min.js"></script>
 		<script src="../scripts/reader.js"></script>
 <?php } ?>
+		<link rel="stylesheet" type="text/css" href="../styles/fonts.css"/>
 <?php if (isset($_SESSION["MORTI-mobileweb"]) && $_SESSION["MORTI-mobileweb"]) {?>
 		<link rel="stylesheet" type="text/css" href="../styles/mobile_web.css" media="screen" />
 <?php } else {?>

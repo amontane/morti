@@ -49,10 +49,12 @@
 
 		</div>
 		<div id="content-container">
-			<div id="chapter">
-			</div>
+			<div>
+				<div id="chapter">
+				</div>
 
-			<div id="comments">
+				<div id="comments">
+				</div>
 			</div>
 		</div>
 

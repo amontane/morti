@@ -1,0 +1,121 @@
+/* Font: Aver. Regular, Italic, Bold and ItalicBold */
+
+@font-face {
+    font-family: Aver;
+    src: url(fonts/Aver.ttf);
+}
+@font-face {
+    font-family: Aver;
+    src: url(fonts/AverBold.ttf);
+    font-weight:bold;
+}
+@font-face {
+    font-family: Aver;
+    src: url(fonts/AverItalic.ttf);
+    font-style:italic;
+}
+@font-face {
+    font-family: Aver;
+    src: url(fonts/AverBoldItalic.ttf);
+    font-weight:bold;
+    font-style:italic;
+}
+
+
+
+/* Font: Broadsheet. Regular, Italic, Bold and ItalicBold */
+
+@font-face {
+    font-family: Broadsheet;
+    src: url(fonts/BroadsheetLDO.ttf);
+}
+@font-face {
+    font-family: Broadsheet;
+    src: url(fonts/BroadsheetLDOBold.ttf);
+    font-weight:bold;
+}
+@font-face {
+    font-family: Broadsheet;
+    src: url(fonts/BroadsheetLDOItalic.ttf);
+    font-style:italic;
+}
+@font-face {
+    font-family: Broadsheet;
+    src: url(fonts/BroadsheetLDOBoldItalic.ttf);
+    font-weight:bold;
+    font-style:italic;
+}
+
+
+
+/* Font: NightStillComes. Regular, Italic, Bold and ItalicBold */
+
+@font-face {
+    font-family: NightStillComes;
+    src: url(fonts/NightStillComes_mine_final_sample.otf);
+}
+@font-face {
+    font-family: NightStillComes;
+    src: url(fonts/NightStillComes_bold_final_sample.otf);
+    font-weight:bold;
+}
+@font-face {
+    font-family: NightStillComes;
+    src: url(fonts/NightStillComes_italic_final_sample.otf);
+    font-style:italic;
+}
+@font-face {
+    font-family: NightStillComes;
+    src: url(fonts/NightStillComes_bolditalic_final_sample.otf);
+    font-weight:bold;
+    font-style:italic;
+}
+
+/* Font: Revolution. Regular */
+
+@font-face {
+    font-family: Revolution;
+    src: url(fonts/REVOLUTION.ttf);
+}
+
+/* Font: Swansea. Regular, Italic, Bold and ItalicBold */
+
+@font-face {
+    font-family: Swansea;
+    src: url(fonts/SWANSE__.TTF);
+}
+@font-face {
+    font-family: Swansea;
+    src: url(fonts/SWANSE_B.TTF);
+    font-weight:bold;
+}
+@font-face {
+    font-family: Swansea;
+    src: url(fonts/SWANSE_I.TTF);
+    font-style:italic;
+}
+@font-face {
+    font-family: Swansea;
+    src: url(fonts/SWANSEBI.TTF);
+    font-weight:bold;
+    font-style:italic;
+}
+
+
+
+/* Font: Vegur. Regular, Italic and Bold */
+
+@font-face {
+    font-family: Vegur;
+    src: url(fonts/Vegur-Regular.otf);
+}
+@font-face {
+    font-family: Vegur;
+    src: url(fonts/Vegur-Bold.otf);
+    font-weight:bold;
+}
+@font-face {
+    font-family: Vegur;
+    src: url(fonts/Vegur-Light.otf);
+    font-style:italic;
+}
