@@ -42,4 +42,17 @@
 
 		return false;
 	}
+
+	function get_comments_for_chapter($id) {
+		$link = new mysqli('localhost', $GLOBALS["MORTI_mysql_user"], $GLOBALS["MORTI_mysql_pass"], $GLOBALS["MORTI_mysql_db"]) or die ('Die');
+		// TODO: Error check?
+		$query = "SELECT * FROM comments where chapter_id = " . mysql_real_escape_string($id);
+		$result = mysqli_query($link, $query);
+		
+		if ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
+			return $row;
+		}
+
+		return false;
+	}
 ?>

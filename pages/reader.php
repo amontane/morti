@@ -13,7 +13,7 @@
 
 			<div id="chapter_list" class="side-menu-section">
 				<div class="side-menu-title">
-					Cap&iacute;tulos
+					Go To
 				</div>
 				<ul>
 <?php
@@ -35,10 +35,13 @@
 				</div>
 				<ul>
 					<li>
-						<a href="#" onClick="export()">Exportar</a>
+						<a href="#" onClick="show_profile()">Perfil</a>
 					</li>
 					<li>
-						<a href="logout.php">Logout</a>
+						<a href="#" onClick="show_export()">Exportar</a>
+					</li>
+					<li>
+						<a href="../actions/logout.php">Logout</a>
 					</li>
 				</ul>
 			</div>

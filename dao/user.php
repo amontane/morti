@@ -1,6 +1,6 @@
 <?php
 	function perform_login($data) {
-		if ($data && count($data) == 4) {
+		if ($data && count($data) == 7) {
 			$_SESSION["MORTI-username"] = $data[2];
 			$_SESSION["MORTI-permissions"] = $data[3];
 		}

@@ -1,5 +1,5 @@
 function openChapter(id) {
-	$.get("chapter-loader.php?identifier=" + id,
+	$.get("../actions/chapter-loader.php?identifier=" + id,
 		function(data) {
 			$("#chapter").html(data);
 		}
@@ -14,4 +14,20 @@ function toggle_side_menu() {
 	} else {
 		$("body").addClass("folded");
 	}
+}
+
+function show_export() {
+	$.get("../actions/export.php",
+		function(data) {
+			$("#chapter").html(data);
+		}
+	);
+} 
+
+function selectAllChapters() {
+	$(".chapter-check").attr("checked", true);
+}
+
+function exportPDF() {
+	//TODO: implement
 }
