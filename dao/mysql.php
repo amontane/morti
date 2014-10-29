@@ -46,7 +46,7 @@
 	function get_comments_for_chapter($id) {
 		$link = new mysqli('localhost', $GLOBALS["MORTI_mysql_user"], $GLOBALS["MORTI_mysql_pass"], $GLOBALS["MORTI_mysql_db"]) or die ('Die');
 		// TODO: Error check?
-		$query = "SELECT * FROM comments where chapter_id = " . mysql_real_escape_string($id);
+		$query = "SELECT c.id, u.username, c.chapter_id, c.text, c.date, c.paragraph FROM comment c, user u where u.email = c.author AND c.chapter_id = " . mysql_real_escape_string($id);
 		$result = mysqli_query($link, $query);
 		
 		if ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {

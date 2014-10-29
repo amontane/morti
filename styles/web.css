@@ -4,64 +4,62 @@ body {
 }
 
 body.reader {
-	background-color: #909090;
+	background-color: white;
 	color:#333;
 }
 
 body.reader #side-menu {
+	background-color: #909090;
 	color: white;
-	width: 200px;
-	min-height:100%;
+	width: 180px;
+	height:100%;
 	position:absolute;
 	left:0px;
 	z-index: 2;
+	overflow-y:auto;
 	transition: left 1s;
 	-webkit-transition: left 1s;
 	-moz-transition: left 1s;
-}
-
-body.reader #side-menu #toggle_button {
-	position: absolute;
-	top:0px;
-	right:-20px;
-	background-color: #909090;
 }
 
 body.reader.folded #side-menu {
 	left:-180px;
 }
 
+body.reader #toggle_button {
+	position: absolute;
+	left:180px;
+	width:20px;
+	height:100%;
+	background-color: #909090;
+	background-image: url('../img/left.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	z-index:3;
+	transition: left 1s;
+	-webkit-transition: left 1s;
+	-moz-transition: left 1s;
+}
+
+body.reader.folded #toggle_button {
+	left:0px;
+	background-image: url('../img/right.png');
+}
+
 body.reader #content-container {
 	z-index:1;
+	overflow-y:scroll;
 	padding-left:200px;
 	background-color: transparent;
 	position:absolute;
 	min-width:100%;
-	min-height:100%;
+	height:100%;
 	transition: padding 1s;
 	-webkit-transition: padding 1s;
 	-moz-transition: padding 1s;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
-}
-
-body.reader #content-container>div {
-	background-color: white;
-	position:absolute;
-	min-height: 100%;
-	width: calc(100% - 200px);
-	transition: width 1s;
-	-webkit-transition: width 1s;
-	-moz-transition: width 1s;
-}
-
-body.reader.folded #content-container>div {
-	width: calc(100% - 20px);
-}
-
-body.reader #chapter {
-	padding:20px;
 }
 
 body.reader.folded #content-container {
@@ -76,6 +74,10 @@ body.reader #side-menu a {
 body.reader #side-menu a:hover {
 	color: yellow;
 	text-decoration:underline;
+}
+
+body.reader #chapter {
+	padding:20px;
 }
 
 body.reader .chapter-title {

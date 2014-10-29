@@ -1,3 +1,26 @@
+/* Font: Almendra. Regular, Italic, Bold and ItalicBold */
+
+@font-face {
+    font-family: Almendra;
+    src: url(fonts/Almendra-Regular.otf);
+}
+@font-face {
+    font-family: Almendra;
+    src: url(fonts/Almendra-Bold.otf);
+    font-weight:bold;
+}
+@font-face {
+    font-family: Almendra;
+    src: url(fonts/Almendra-Italic.otf);
+    font-style:italic;
+}
+@font-face {
+    font-family: Almendra;
+    src: url(fonts/Almendra-BoldItalic.otf);
+    font-weight:bold;
+    font-style:italic;
+}
+
 /* Font: Aver. Regular, Italic, Bold and ItalicBold */
 
 @font-face {

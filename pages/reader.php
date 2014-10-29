@@ -46,18 +46,14 @@
 				</ul>
 			</div>
 
-			<div id="toggle_button">
-				<a href="#" onClick="toggle_side_menu()">&lt;&lt;</a>
+		</div>
+		<a id="toggle_button" href="#" onClick="toggle_side_menu()">
+		</a>
+		<div id="content-container">
+			<div id="chapter">
 			</div>
 
-		</div>
-		<div id="content-container">
-			<div>
-				<div id="chapter">
-				</div>
-
-				<div id="comments">
-				</div>
+			<div id="comments">
 			</div>
 		</div>
 
