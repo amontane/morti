@@ -29,5 +29,5 @@ function selectAllChapters() {
 }
 
 function exportPDF() {
-	//TODO: implement
+	window.location = "../actions/pdf-loader.php?"; //TODO: pass parameters
 }

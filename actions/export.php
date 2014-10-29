@@ -18,5 +18,5 @@
 	</div>
 
 	<div class="export-section">
-		<input type="button" value="Exportar" onClick="exportPdf()"/>
+		<input type="button" value="Exportar" onClick="exportPDF()"/>
 	</div>

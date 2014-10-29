@@ -2,13 +2,17 @@
 	include '../fpdf/fpdf.php';
 	include '../dao/files.php';
 
+	function generateTimeStamp() {
+		return date('dM_Hi');
+	}
+
 	function makePDF ($config) {
 		$pdf = new FPDF('P','mm',$config["page_size"]);
 		$pdf->SetFont('Arial','',16);
 		addCover($pdf, $config);
 		addChapter($pdf, $config, 1);
 		addChapter($pdf, $config, 1);
-		$pdf->Output();//'morti.pdf','D');
+		$pdf->Output('morti_' . generateTimeStamp() .'.pdf','D');
 	}
 
 	function addCover ($pdf, $config) {
@@ -51,6 +55,7 @@
 			$config["chapter_font_decoration"] = "";
 			$config["chapter_font_size"] = 14;
 			$config["chapter_line_height"] = 5;
+			$config["chapter_dialog_line_break_height"] = 1;
 			$config["chapter_line_break_height"] = 5;
 			$config["meanwhile_font_face"] = "Arial";
 			$config["meanwhile_font_decoration"] = "I";

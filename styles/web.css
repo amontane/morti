@@ -96,6 +96,10 @@ body.reader .chapter-content {
 	padding-bottom: 50px;
 }
 
+body.reader .chapter-content p.short{
+	margin-top: -15px;
+}
+
 body.reader .meanwhile {
 	font-family: NightStillComes;
 	font-size: 24pt;
