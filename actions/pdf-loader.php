@@ -13,8 +13,7 @@
 		addCover($pdf, $config);
 		addChapter($pdf, $config, 1);
 		addChapter($pdf, $config, 2);
-		//$pdf->Output('morti_' . generateTimeStamp() .'.pdf','D');
-		$pdf->Output();
+		$pdf->Output('morti_' . generateTimeStamp() .'.pdf','D');
 	}
 
 	function addCover ($pdf, $config) {
