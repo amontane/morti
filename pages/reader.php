@@ -1,10 +1,11 @@
 <?php
+	include_once '../common/session_protection.php';
 	$MORTI_body_class = 'reader';
 	$MORTI_load_scripts = true;
-	include '../dao/mysql.php';
-	include '../dao/user.php';
-	include '../dao/files.php';
-	include '../common/header.php';
+	include_once '../dao/mysql.php';
+	include_once '../dao/user.php';
+	include_once '../dao/files.php';
+	include_once '../common/header.php';
 ?>
 
 		<div id="side-menu">

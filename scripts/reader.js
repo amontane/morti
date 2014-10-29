@@ -4,6 +4,11 @@ function openChapter(id) {
 			$("#chapter").html(data);
 		}
 	);
+	$.get("../actions/comment-loader.php?chapterId=" + id,
+		function(data) {
+			$("#comments").html(data);
+		}
+	);
 
 	// TODO: load comments as well
 }

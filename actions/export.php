@@ -1,5 +1,6 @@
 <?php
-	include '../dao/mysql.php';
+	include_once '../dao/mysql.php';
+	include_once '../common/session_protection.php';
 ?>
 	<div class="export-section">
 		Seleccionar cap&iacute;tulos (<a href="#" onClick="selectAllChapters()">seleccionar todos</a>)<br/>

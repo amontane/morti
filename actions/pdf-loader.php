@@ -1,7 +1,8 @@
 <?php
-	include '../fpdf/fpdf.php';
-	include '../dao/files.php';
-	include '../dao/mysql.php';
+	include_once '../common/session_protection.php';
+	include_once '../fpdf/fpdf.php';
+	include_once '../dao/files.php';
+	include_once '../dao/mysql.php';
 
 	function generateTimeStamp() {
 		return date('dM_Hi');

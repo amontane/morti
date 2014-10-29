@@ -1,6 +1,7 @@
 <?php
-	include 'dao/mysql.php';
-	include 'dao/user.php';
+	session_start();
+	include_once 'dao/mysql.php';
+	include_once 'dao/user.php';
 
 	if (isset($_POST["login-uname"]) && isset($_POST["login-pass"])) {
 		$result = attempt_login($_POST["login-uname"] , $_POST["login-pass"]);
@@ -10,7 +11,7 @@
 	}
 	if (!isset ($MORTI_loginerror)) $MORTI_loginerror = "";
 	if (!is_valid_session()) {
-		header("Location: pages/login.php" . $MORTI_loginerror);
+		header("Location: pages/login.php?" . $MORTI_loginerror);
 	} else {
 		header("Location: pages/reader.php");
 	}
