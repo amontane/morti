@@ -4,6 +4,8 @@
 	include_once '../dao/files.php';
 
 	$ident = $_GET["identifier"];
+	$_SESSION["MORTI-selected-chapter"] = $ident;
+	
 	if (isset($ident)) {
 		$chapter = get_chapter($ident);
 

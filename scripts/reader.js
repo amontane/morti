@@ -2,15 +2,20 @@ function openChapter(id) {
 	$.get("../actions/chapter-loader.php?identifier=" + id,
 		function(data) {
 			$("#chapter").html(data);
+			$.get("../actions/comment-loader.php?chapterId=" + id,
+				function(data) {
+					$("#comments").html(data);
+				}
+			);
 		}
 	);
-	$.get("../actions/comment-loader.php?chapterId=" + id,
-		function(data) {
-			$("#comments").html(data);
-		}
-	);
+}
 
-	// TODO: load comments as well
+function submitComment(chapterId) {
+	var text = $('#new_comment').value();
+	$.post("../actions/chapter-loader.php",
+		{chapter: chapterId, comment: text},
+		function(data) {
 }
 
 function toggle_side_menu() {

@@ -1,6 +1,7 @@
 <?php
 	function perform_login($data) {
 		if ($data && count($data) == 7) {
+			$_SESSION["MORTI-mail"] = $data[0];
 			$_SESSION["MORTI-username"] = $data[2];
 			$_SESSION["MORTI-permissions"] = $data[3];
 		}
@@ -12,6 +13,9 @@
 		}
 		if (isset($_SESSION["MORTI-username"])) {
 			unset($_SESSION["MORTI-username"]);
+		}
+		if (isset($_SESSION["MORTI-mail"])) {
+			unset($_SESSION["MORTI-mail"]);
 		}
 	}
 

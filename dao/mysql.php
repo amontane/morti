@@ -49,10 +49,10 @@
 		$query = "SELECT c.id, u.username, u.avatar, c.chapter_id, c.text, c.date, c.paragraph FROM comment c, user u where u.email = c.author AND c.chapter_id = " . mysql_real_escape_string($id);
 		$result = mysqli_query($link, $query);
 		
-		if ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
-			return $row;
+		$table = array();
+		while ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
+			$table[] = $row;
 		}
-
-		return false;
+		return $table;
 	}
 ?>
