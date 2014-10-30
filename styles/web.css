@@ -141,26 +141,25 @@ body.reader .comment_wrapper:last-child {
 
 body.reader .comment_wrapper .avatar {
 	border:2px solid black;
+	margin-right:10px;
 	float:left;
 }
 
 body.reader .comment_wrapper .username {
 	display:inline;
-	padding:3px 10px;
+	padding-right:15px;
 	font-size:14pt;
 	font-weight: bold;
 }
 
 body.reader .comment_wrapper .date {
 	display:inline;
-	padding:3px 3px;
 	font-size:11pt;
 	color:#666;
 }
 
 body.reader .comment_wrapper .comment {
 	display:inline;
-	padding: 3px 10px;
 	font-style: italic;
 	font-size:13pt;
 }
@@ -170,7 +169,7 @@ body.reader #comments .comments_title {
 	font-family: NightStillComes;
 }
 
-body.reader #comments #new_coment {
+body.reader #comments #new_comment {
 	padding:15px;
 	resize:none;
 	width:100%;
