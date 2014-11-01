@@ -145,6 +145,15 @@ body.reader .comment_wrapper .avatar {
 	float:left;
 }
 
+body.reader .comment_wrapper .username a {
+	text-decoration: none;
+	color: #333;
+}
+
+body.reader .comment_wrapper .username a:hover {
+	text-decoration: underline;
+}
+
 body.reader .comment_wrapper .username {
 	display:inline;
 	padding-right:15px;

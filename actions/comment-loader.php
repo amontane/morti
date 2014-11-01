@@ -39,15 +39,16 @@
 
 	function paint_comment($comment_structure) {
 		$commentId = $comment_structure[0];
-		$username = $comment_structure[1];
-		$avatar = $comment_structure[2];
-		$chapterId = $comment_structure[3];
-		$text = $comment_structure[4];
-		$date = $comment_structure[5];
-		$paragraph = $comment_structure[6];
+		$email = $comment_structure[1];
+		$username = $comment_structure[2];
+		$avatar = $comment_structure[3];
+		$chapterId = $comment_structure[4];
+		$text = $comment_structure[5];
+		$date = $comment_structure[6];
+		$paragraph = $comment_structure[7];
 
 		echo ('<div class="comment_wrapper"><img class="avatar" src="' . $avatar . '" height="80px" width="80px" align="top"/>');
-		echo ('<div class="username">'. htmlspecialchars($username) .'</div>');
+		echo ('<div class="username"><a href="mailto:'.htmlspecialchars($email).'">'. htmlspecialchars($username) .'</a></div>');
 		echo ('<div class="date">' . htmlspecialchars(pretty_date($date)) . '</div><br/>');
 		if (isset($paragraph)) {
 			// TODO: Set the link to the paragraph. (En referencia a este pàrrafo:)

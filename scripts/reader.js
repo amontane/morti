@@ -42,6 +42,30 @@ function show_export() {
 	);
 } 
 
+function show_profile() {
+	$.get("../actions/profile.php",
+		function(data) {
+			$("#chapter").html(data);
+			$("#comments").html('');
+		}
+	);
+}
+
+function submitProfile() {
+	var avatar = $("#avatar").value();
+	var uname = $("#username").value();
+	var new_pass = $("#new_pass").value();
+	var conf_new_pass = $("#confirm_new_pass").value();
+	var old_pass = $("#old_pass").value();
+	$.post("../actions/profile.php",
+		{avatar:avatar, uname:uname, new_pass:new_pass, conf_new_pass:conf_new_pass, old_pass:old_pass},
+		function(data) {
+			$("#chapter").html(data);
+			$("#comments").html('');
+		}
+	);
+}
+
 function selectAllChapters() {
 	$(".chapter-check").attr("checked", true);
 }

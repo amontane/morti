@@ -1,4 +1,5 @@
 <?php
+	$MORTI_body_class = 'login';
 	include '../common/header.php';
 ?>	
 
