@@ -13,14 +13,20 @@
 
 		if (attempt_login($_SESSION["MORTI-mail"], $old_pass)) {
 			if (user_is_master() || user_is_player()) {
-				if (isset($new_pass) && $conf_new_pass == $new_pass) {
+				if (isset($new_pass) && $new_pass != '' && $conf_new_pass == $new_pass) {
 					change_password($new_pass);
 				}
 			} else {
-				if (isset($new_pass) && $conf_new_pass == $new_pass) {
-					change_data($avatar, $uname, $new_pass);
+				if (isset($new_pass) && $new_pass != '' && $conf_new_pass == $new_pass) {
+					if (change_data($avatar, $uname, $new_pass)) {
+						$_SESSION["MORTI-username"] = $uname;
+						$_SESSION["MORTI-avatar"] = $avatar;
+					}
 				} else {
-					change_data($avatar, $uname, $old_pass);
+					if (change_data($avatar, $uname, $old_pass)) {
+						$_SESSION["MORTI-username"] = $uname;
+						$_SESSION["MORTI-avatar"] = $avatar;
+					}
 				}
 			}
 		}

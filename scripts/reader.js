@@ -52,11 +52,11 @@ function show_profile() {
 }
 
 function submitProfile() {
-	var avatar = $("#avatar").value();
-	var uname = $("#username").value();
-	var new_pass = $("#new_pass").value();
-	var conf_new_pass = $("#confirm_new_pass").value();
-	var old_pass = $("#old_pass").value();
+	var avatar = $("#avatar").val();
+	var uname = $("#username").val();
+	var new_pass = $("#new_pass").val();
+	var conf_new_pass = $("#confirm_new_pass").val();
+	var old_pass = $("#old_pass").val();
 	$.post("../actions/profile.php",
 		{avatar:avatar, uname:uname, new_pass:new_pass, conf_new_pass:conf_new_pass, old_pass:old_pass},
 		function(data) {

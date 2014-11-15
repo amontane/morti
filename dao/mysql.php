@@ -83,4 +83,26 @@
 		}
 		return false;
 	}
+
+	function change_password($new_pass) {
+		$link = new mysqli('localhost', $GLOBALS["MORTI_mysql_user"], $GLOBALS["MORTI_mysql_pass"], $GLOBALS["MORTI_mysql_db"]) or die ('Die');
+		// TODO: Error check?
+		$update = "UPDATE user SET password=MD5('". mysql_real_escape_string($new_pass). "') WHERE email='" . mysql_real_escape_string($_SESSION["MORTI-mail"]) . "'";
+
+		if (mysqli_query($link, $update) === TRUE) {
+			return true;
+		}
+		return false;
+	}
+
+	function change_data($avatar, $uname, $new_pass) {
+		$link = new mysqli('localhost', $GLOBALS["MORTI_mysql_user"], $GLOBALS["MORTI_mysql_pass"], $GLOBALS["MORTI_mysql_db"]) or die ('Die');
+		// TODO: Error check?
+		$update = "UPDATE user SET password=MD5('". mysql_real_escape_string($new_pass). "'),username='".mysql_real_escape_string($uname)."',avatar='".mysql_real_escape_string($avatar)."' WHERE email='" . mysql_real_escape_string($_SESSION["MORTI-mail"]) . "'";
+
+		if (mysqli_query($link, $update) === TRUE) {
+			return true;
+		}
+		return false;
+	}
 ?>
