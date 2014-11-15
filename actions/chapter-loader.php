@@ -29,6 +29,7 @@
 		}
 
 		if (isset($additional)) {
+			echo ('<a name="marker-meanwhile">');
 			echo ('<div class="meanwhile">Mientras tanto, en la partida de rol...</div>');
 			echo ('<div class="additional-content">');
 			echo ('<ul>');

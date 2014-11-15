@@ -3,8 +3,21 @@ function openChapter(id) {
 		function(data) {
 			$("#chapter").html(data);
 			loadComments(id);
+			updateMenu(id);
 		}
 	);
+}
+
+function updateMenu(id) {
+	if (id) {
+		$.get("../actions/menu-loader.php?identifier=" + id,
+			function(data) {
+				$("#current_chapter_options").html(data);
+			}
+		);
+	} else {
+		$("#current_chapter_options").html('');
+	}
 }
 
 function loadComments(id) {
@@ -38,6 +51,7 @@ function show_export() {
 		function(data) {
 			$("#chapter").html(data);
 			$("#comments").html('');
+			updateMenu();
 		}
 	);
 } 
@@ -47,6 +61,7 @@ function show_profile() {
 		function(data) {
 			$("#chapter").html(data);
 			$("#comments").html('');
+			updateMenu();
 		}
 	);
 }
