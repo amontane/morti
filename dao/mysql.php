@@ -73,8 +73,8 @@
 	function insert_paragraph_comment($chapter, $comment, $author, $paragraph) {
 		$link = new mysqli('localhost', $GLOBALS["MORTI_mysql_user"], $GLOBALS["MORTI_mysql_pass"], $GLOBALS["MORTI_mysql_db"]) or die ('Die');
 		// TODO: Error check?
-		$insert = "INSERT INTO comment (author, chapter_id, text, date) VALUES ('". mysql_real_escape_string($author).
-			"', ".mysql_real_escape_string($chapter).", '".$comment."', NOW())";
+		$insert = "INSERT INTO comment (author, chapter_id, text, date, paragraph) VALUES ('". mysql_real_escape_string($author).
+			"', ".mysql_real_escape_string($chapter).", '".$comment."', NOW(), " . $paragraph .")";
 
 		if (mysqli_query($link, $insert) === TRUE) {
 			$update = "UPDATE chapter SET last_comment=NOW() WHERE id=" . mysql_real_escape_string($chapter);

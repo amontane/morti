@@ -184,3 +184,38 @@ body.reader #comments #new_comment {
 	width:100%;
 	height:100px;
 }
+
+/* Marker icons */
+
+body.reader .chapter-content p {
+	position: relative;
+}
+
+body.reader .marker_setter {
+	position:absolute;
+	display:none;
+	top:0px;
+	left:0px;
+	background-color:yellow;
+	color:blue;
+}
+
+body.reader .comment_paragraph {
+	position:absolute;
+	display:none;
+	top:0px;
+	left:0px;
+	background-color:blue;
+	color:yellow;
+}
+
+body.reader.show_markers .marker_setter,
+body.reader.show_comment_markers .comment_paragraph {
+	opacity:1;
+	display:block;
+}
+
+body.reader.show_markers a.marker_setter:hover,
+body.reader.show_comment_markers a.comment_paragraph:hover {
+	opacity:0.3;
+}

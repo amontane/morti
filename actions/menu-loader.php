@@ -22,6 +22,12 @@
 		}
 
 		echo ('</div>');
+		
+		echo ('<ul>');
+		echo ('<li><a href="#" onClick="showMarkers(true)">Fijar punto de libro</a></li>');
+		echo ('<li><a href="#" onClick="showCommentMarkers(true)">Comentar párrafo específico</a></li>');
+		echo ('</ul>');
+
 		echo ('<ul>');
 		echo ('<li><a href="#marker-start">Inicio</a></li>');
 

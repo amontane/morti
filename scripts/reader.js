@@ -30,8 +30,9 @@ function loadComments(id) {
 
 function submitComment(chapterId) {
  	var text = $('#new_comment').val();
+ 	var paragraph = $('#related_paragraph_field').val();
  	$.post("../actions/comment-loader.php",
- 		{chapter: chapterId, comment: text},
+ 		{chapter: chapterId, comment: text, paragraph: paragraph},
  		function(data) {
  			loadComments(chapterId);
  		}
@@ -88,4 +89,42 @@ function selectAllChapters() {
 function exportPDF() {
 	// TODO: gather parameters
 	window.location = "../actions/pdf-loader.php?"; //TODO: pass parameters
+}
+
+function setMarker (chapterId, markerNumber) {
+	// TODO: set marker in database
+	showMarkers(false);
+}
+
+function showMarkers (show) {
+	if (show) {
+		$("body").addClass("show_markers");
+		$("body").removeClass("show_comment_markers");
+		setTimeout(function(){showMarkers(false);},5000);
+	} else {
+		$("body").removeClass("show_markers");
+	}
+}
+
+function commentParagraph (summary, markerNumber) {
+	// TODO: go to comment passing commented paragraph
+	var content = '<div class="related_label">En referencia al p&aacute;rrafo: </div><div class="related_paragraph">' + summary + '</div>';
+	content = content + '<input id="related_paragraph_field" type="hidden" value="' + markerNumber + '"/><a href="#" onClick="removeRelated()">Eliminar referencia</a>';
+	$("#paragraph_container").html(content);
+	window.location = "#marker-newcomment";
+	showCommentMarkers(false);
+}
+
+function removeRelated () {
+	$("#paragraph_container").html("");
+}
+
+function showCommentMarkers (show) {
+	if (show) {
+		$("body").addClass("show_comment_markers");
+		$("body").removeClass("show_markers");
+		setTimeout(function(){showCommentMarkers(false);},5000);
+	} else {
+		$("body").removeClass("show_comment_markers");
+	}
 }

@@ -4,10 +4,11 @@
 		return (substr($line, 0, 1) == "-");
 	}
 
-	function display_chapter($chapter) {
+	function display_chapter($chapter, $chapterId) {
 		$chapterRoute = "../files/chapters/" . $chapter;
 		$fh = fopen($chapterRoute, 'r')  or die ("Die!");
 		$lastLineWasDialog = false;
+		$markerNum = 1;
 		while (!feof($fh)) {
 			$theData = fgets($fh);
 			// TODO: better handling of the error
@@ -17,13 +18,30 @@
 				if (isDialog($theData) && $lastLineWasDialog) {
 					echo('<p class="short">' . $theData . "</p>\n");
 				} else {
-					echo("<p>" . $theData . "</p>\n");
+					echo("<p>");
+					echo ("<a name=\"paragraph_".$markerNum."\"/>");
+					echo ("<a class=\"marker_setter\" href=\"#\" onClick=\"setMarker(".$chapterId. "," . $markerNum .")\">Poner punto de libro</a>");
+					echo ("<a class=\"comment_paragraph\" href=\"#\" onClick=\"commentParagraph('".htmlspecialchars(trim_content($theData)). "'," . $markerNum .")\">Hacer un comentario (constructivo plz)</a>");
+					echo ($theData . "</p>\n");
+					$markerNum++;
 				}
 				$lastLineWasDialog = isDialog($theData);
 			}
 		}
 
 		fclose($fh);
+	}
+
+	function trim_content ($content) {
+		$numberOfWords = 7;
+		$workingContent = str_replace("\n", " ", $content);
+		$workingContent = str_replace("'", "\'", $workingContent);
+		$contentArray = explode(" ", $workingContent);
+		if (count($contentArray) <= $numberOfWords) {
+			return $workingContent;
+		}
+		array_splice($contentArray, $numberOfWords);
+		return implode(" ", $contentArray) . "...";
 	}
 
 	function display_additional($additional) {

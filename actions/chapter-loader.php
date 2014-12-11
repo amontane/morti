@@ -24,12 +24,12 @@
 
 		if (isset($text)) {
 			echo ('<div class="chapter-content">');
-			display_chapter($text);
+			display_chapter($text, $ident);
 			echo ('</div>');
 		}
 
 		if (isset($additional)) {
-			echo ('<a name="marker-meanwhile">');
+			echo ('<a name="marker-meanwhile"/>');
 			echo ('<div class="meanwhile">Mientras tanto, en la partida de rol...</div>');
 			echo ('<div class="additional-content">');
 			echo ('<ul>');

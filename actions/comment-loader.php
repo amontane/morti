@@ -17,6 +17,7 @@
 			echo ('</div>');
 		}
 		echo('<div class="comments_title">Dejar un comentario</div>');
+		echo('<div id="paragraph_container"/>');
 		echo ('<textarea id="new_comment"></textarea>');
 		echo ('<input type="button" value="enviar" onClick="submitComment(' . $_GET["chapterId"] . ')">');
 	} else if (isset($_POST["comment"])) {
@@ -30,7 +31,7 @@
 			if (!isset($paragraph) || $chapterId == 1984) {
 				insert_comment($chapterId, $commentText, $author);
 			} else {
-				insert_paragraph_comment($chapterId, $comment, $author, $paragraph);
+				insert_paragraph_comment($chapterId, $commentText, $author, $paragraph);
 			}
 		}
 	} else {
@@ -52,6 +53,7 @@
 		echo ('<div class="date">' . htmlspecialchars(pretty_date($date)) . '</div><br/>');
 		if (isset($paragraph)) {
 			// TODO: Set the link to the paragraph. (En referencia a este pàrrafo:)
+			echo ('<div class="inreference">En referencia a <a href="#paragraph_' . $paragraph . '">este p&aacute;rrafo</a>:</div>');
 		}
 		echo ('<div class="comment">' . htmlspecialchars($text) . '</div></div>');
 	}
