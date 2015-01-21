@@ -1,9 +1,12 @@
-function openChapter(id) {
+function openChapter(id, paragraph) {
 	$.get("../actions/chapter-loader.php?identifier=" + id,
 		function(data) {
 			$("#chapter").html(data);
 			loadComments(id);
 			updateMenu(id);
+			if (paragraph != undefined) {
+				window.location.hash = '#paragraph_' + paragraph;
+			}
 		}
 	);
 }
@@ -92,7 +95,12 @@ function exportPDF() {
 }
 
 function setMarker (chapterId, markerNumber) {
-	// TODO: set marker in database
+		$.post("../actions/profile.php",
+ 		{marker_chapter: chapterId, marker_paragraph: markerNumber},
+ 		function(data) {
+ 			$("#marker_link_holder").html(data);
+ 		}
+ 	);
 	showMarkers(false);
 }
 

@@ -105,4 +105,29 @@
 		}
 		return false;
 	}
+
+	function set_marker ($chapterId, $paragraph) {
+		error_log("hola " . $chapterId . " " . $paragraph);
+		$link = new mysqli('localhost', $GLOBALS["MORTI_mysql_user"], $GLOBALS["MORTI_mysql_pass"], $GLOBALS["MORTI_mysql_db"]) or die ('Die');
+		// TODO: Error check?
+		$update = "UPDATE user SET marker_chapter=". mysql_real_escape_string($chapterId). ", marker_paragraph=".mysql_real_escape_string($paragraph)." WHERE email='" . mysql_real_escape_string($_SESSION["MORTI-mail"]) . "'";
+		error_log ("&& " . $update . " &&");
+		if (mysqli_query($link, $update) === TRUE) {
+			return true;
+		}
+		return false;
+	}
+
+	function get_marker() {
+		$link = new mysqli('localhost', $GLOBALS["MORTI_mysql_user"], $GLOBALS["MORTI_mysql_pass"], $GLOBALS["MORTI_mysql_db"]) or die ('Die');
+		// TODO: Error check?
+		$query = "SELECT marker_chapter, marker_paragraph FROM user where email = '" . mysql_real_escape_string($_SESSION["MORTI-mail"]) . "' AND marker_chapter IS NOT NULL AND marker_paragraph IS NOT NULL";
+		$result = mysqli_query($link, $query);
+		
+		if ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
+			return $row;
+		}
+
+		return false;
+	}
 ?>

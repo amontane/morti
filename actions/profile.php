@@ -30,6 +30,14 @@
 				}
 			}
 		}
+	} else if (isset($_POST["marker_chapter"]) && isset($_POST["marker_paragraph"])) {
+		$chapterId = $_POST["marker_chapter"];
+		$paragraph = $_POST["marker_paragraph"];
+		set_marker ($chapterId, $paragraph);
+		echo ('<li>');
+		echo ('<a href="#" onClick="openChapter('.$chapterId.','.$paragraph.')">Punto de libro</a>');
+		echo ('</li>');
+		die();
 	}
 ?>
 

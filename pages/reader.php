@@ -35,6 +35,15 @@
 					Opciones
 				</div>
 				<ul>
+					<div id="marker_link_holder">
+						<?php
+						$markerRow = get_marker(); 
+						if($markerRow) {
+							echo ('<li>');
+							echo ('<a href="#" onClick="openChapter('.$markerRow[0].','.$markerRow[1].')">Punto de libro</a>');
+							echo ('</li>');
+						}?>
+					</div>
 					<li>
 						<a href="#" onClick="show_profile()">Perfil</a>
 					</li>
