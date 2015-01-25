@@ -19,7 +19,7 @@
 		echo('<div class="comments_title">Dejar un comentario</div>');
 		echo('<div id="paragraph_container"/>');
 		echo ('<textarea id="new_comment"></textarea>');
-		echo ('<input type="button" value="enviar" onClick="submitComment(' . $_GET["chapterId"] . ')">');
+		echo ('<input class="button" type="button" value="Enviar" onClick="submitComment(' . $_GET["chapterId"] . ')">');
 	} else if (isset($_POST["comment"])) {
 		$commentText = $_POST["comment"];
 		$chapterId = $_POST["chapter"];

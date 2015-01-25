@@ -14,7 +14,7 @@
 
 			<div id="chapter_list" class="side-menu-section">
 				<div class="side-menu-title">
-					Go To
+					Cap&iacute;tulos
 				</div>
 				<ul>
 <?php
@@ -22,7 +22,7 @@
 	for ($i=0; $i<sizeof($list); $i++) {
 ?>
 					<a href='#' onClick='openChapter(<?=$list[$i][0]?>)'>
-						<li><?=$list[$i][2]?></li>
+						<li><?=htmlspecialchars($list[$i][2])?></li>
 					</a>
 <?php
 	}
@@ -40,7 +40,7 @@
 						$markerRow = get_marker(); 
 						if($markerRow) {
 							echo ('<a href="#" onClick="openChapter('.$markerRow[0].','.$markerRow[1].')">');
-							echo ('<li>Punto de libro</li>');
+							echo ('<li>Ir al punto de libro</li>');
 							echo ('</a>');
 						}?>
 					</div>

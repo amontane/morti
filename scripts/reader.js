@@ -116,8 +116,8 @@ function showMarkers (show) {
 
 function commentParagraph (summary, markerNumber) {
 	// TODO: go to comment passing commented paragraph
-	var content = '<div class="related_label">En referencia al p&aacute;rrafo: </div><div class="related_paragraph">' + summary + '</div>';
-	content = content + '<input id="related_paragraph_field" type="hidden" value="' + markerNumber + '"/><a href="#" onClick="removeRelated()">Eliminar referencia</a>';
+	var content = '<div class="related_label">En referencia al p&aacute;rrafo: </div><div class="related_paragraph">&ldquo;' + summary + '&rdquo;</div>';
+	content = content + '<input id="related_paragraph_field" type="hidden" value="' + markerNumber + '"/><a href="#" class="related_link" onClick="removeRelated()">Eliminar referencia</a>';
 	$("#paragraph_container").html(content);
 	window.location = "#marker-newcomment";
 	showCommentMarkers(false);

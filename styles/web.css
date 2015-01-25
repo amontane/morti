@@ -7,6 +7,15 @@ body {
 	margin:0;
 }
 
+input.button {
+	min-width:200px;
+	width:40%;
+	height: 50px;
+	background-color: #606099;
+	color:white;
+	font-size:24px;
+}
+
 /*************************************************
 ****** Login screen
 *************************************************/
@@ -52,14 +61,6 @@ body.login input.field {
 	height: 30px;
 }
 
-body.login input.button {
-	min-width:200px;
-	width:40%;
-	height: 50px;
-	background-color: #606099;
-	color:white;
-	font-size:24px;
-}
 /*************************************************
 ****** Reader - General
 *************************************************/
@@ -222,6 +223,10 @@ body.reader .additional-content ul li:before {
 	content: "- ";
 }
 
+/*************************************************
+****** Reader - Comments
+*************************************************/
+
 body.reader #comments {
 	padding:20px;
 }
@@ -283,7 +288,9 @@ body.reader #comments #new_comment {
 	height:100px;
 }
 
-/* Marker icons */
+/*************************************************
+****** Reader - Markers
+*************************************************/
 
 body.reader .chapter-content p {
 	position: relative;
@@ -317,3 +324,49 @@ body.reader.show_markers a.marker_setter:hover,
 body.reader.show_comment_markers a.comment_paragraph:hover {
 	opacity:0.3;
 }
+
+body.reader .inreference {
+	padding-bottom:10px;
+	font-size: 10pt;
+	font-family: Aver;
+	font-style:italic;
+	color: #606090;
+}
+
+body.reader .inreference a {
+	color:#336;
+	text-decoration:none;
+}
+
+body.reader .inreference a:hover{
+	text-decoration: underline;
+}
+
+body.reader .related_label {
+	display:inline;
+	font-size:11pt;
+}
+
+body.reader .related_paragraph {
+	display:inline;
+	font-size:14pt;
+	color:#666;
+}
+
+body.reader .related_link {
+	display:inline-block;
+	color:white;
+	font-size:8pt;
+	background-color:#ff3030;
+	padding: 5px 10px 7px;
+	margin-left:10px;
+	text-decoration:none;
+}
+
+/*************************************************
+****** Reader - Export
+*************************************************/
+
+/*************************************************
+****** Reader - Profile
+*************************************************/
