@@ -9,8 +9,8 @@ body {
 
 input.button {
 	min-width:200px;
-	width:40%;
 	height: 50px;
+	padding: 0 50px;
 	background-color: #606099;
 	color:white;
 	font-size:24px;
@@ -308,8 +308,6 @@ body.reader .marker_setter {
 	display:none;
 	top:0px;
 	left:0px;
-	background-color:yellow;
-	color:blue;
 }
 
 body.reader .comment_paragraph {
@@ -317,8 +315,6 @@ body.reader .comment_paragraph {
 	display:none;
 	top:0px;
 	left:0px;
-	background-color:blue;
-	color:yellow;
 }
 
 body.reader.show_markers .marker_setter,
@@ -375,10 +371,11 @@ body.reader .related_link {
 *************************************************/
 
 body.reader .export-section  {
-	border: 5px solid #888;
+	border: 5px solid #606099;
 	min-width:30%;
-	border-radius: 8px;
+	border-radius: 10px;
 	float:left;
+	padding: 0 0 10px;
 }
 
 body.reader .export-section div {
@@ -388,9 +385,9 @@ body.reader .export-section div {
 body.reader .export-section .section-title {
 	font-size:14pt;
 	font-family: Vegur;
-	background-color: #888;
+	background-color: #606099;
 	color:white;
-	padding:5px 15px;
+	padding:5px 15px 10px;
 	margin: 0 0 5px;
 }
 
@@ -427,3 +424,36 @@ body.reader .export-submit {
 /*************************************************
 ****** Reader - Profile
 *************************************************/
+
+body.reader .profile .user-avatar-big {
+	float:right;
+}
+
+body.reader .profile .form-field {
+	margin: 0 0 20px;
+}
+
+body.reader .profile .form-field .field-title {
+	font-size:13pt;
+	color: #606099;
+}
+
+body.reader .profile .form-field .field-field {
+
+}
+
+body.reader .profile .form-field .field-field input {
+	height:30px;
+	min-width:400px;
+	width: calc(100% - 250px);
+}
+
+body.reader .profile .form-field .field-description {
+	font-size:10pt;
+	font-style: italic;
+	color:#999;
+}
+
+body.reader .profile .button {
+	clear:right;
+}

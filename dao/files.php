@@ -20,8 +20,8 @@
 				} else {
 					echo("<p>");
 					echo ("<a name=\"paragraph_".$markerNum."\"/>");
-					echo ("<a class=\"marker_setter\" href=\"#\" onClick=\"setMarker(".$chapterId. "," . $markerNum .")\">Poner punto de libro</a>");
-					echo ("<a class=\"comment_paragraph\" href=\"#\" onClick=\"commentParagraph('".htmlspecialchars(trim_content($theData)). "'," . $markerNum .")\">Hacer un comentario (constructivo plz)</a>");
+					echo ("<a class=\"marker_setter\" href=\"#\" onClick=\"setMarker(".$chapterId. "," . $markerNum .")\"><img src='../img/marker.png' width='48px'/></a>");
+					echo ("<a class=\"comment_paragraph\" href=\"#\" onClick=\"commentParagraph('".htmlspecialchars(trim_content($theData)). "'," . $markerNum .")\"><img src='../img/comment.png' width='48px'/></a>");
 					echo ($theData . "</p>\n");
 					$markerNum++;
 				}

@@ -42,39 +42,41 @@
 ?>
 
 	<div class="profile">
-		<div class="title">Perfil de usuario <?=$_SESSION["MORTI-mail"]?></div>
-		<img src="<?=$_SESSION["MORTI-avatar"]?>" height="200px" width="200px"/>
+		<div class="page-title"><?=$_SESSION["MORTI-mail"]?></div>
+		<div class="user-avatar-big">
+			<img src="<?=$_SESSION["MORTI-avatar"]?>" height="200px" width="200px"/>
+		</div>
 		<div class="form-field">
-			<div class="field_title">Nombre de usuario</div>
+			<div class="field-title">Nombre de usuario</div>
 			<?php if(user_is_master() || user_is_player()) { ?>
-			<div class="field_field"><input type="text" id="username" value="<?=$_SESSION["MORTI-username"]?>" disabled="disabled"/></div>
-			<div class="field_description">Los usuarios con permisos especiales, como tú, no pueden cambiar el nombre</div>
+			<div class="field-field"><input type="text" id="username" value="<?=$_SESSION["MORTI-username"]?>" disabled="disabled"/></div>
+			<div class="field-description">Los usuarios con permisos especiales, como tú, no pueden cambiar el nombre</div>
 			<?php } else { ?>
-			<div class="field_field"><input type="text" id="username" value="<?=$_SESSION["MORTI-username"]?>"/></div>
+			<div class="field-field"><input type="text" id="username" value="<?=$_SESSION["MORTI-username"]?>"/></div>
 			<?php } ?>
 		</div>
 		<div class="form-field">
-			<div class="field_title">Avatar</div>
+			<div class="field-title">URL del avatar</div>
 			<?php if(user_is_master() || user_is_player()) { ?>
-			<div class="field_field"><input type="text" id="avatar" value="<?=$_SESSION["MORTI-avatar"]?>" disabled="disabled"/></div>
-			<div class="field_description">Los usuarios con permisos especiales, como tú, no pueden cambiar el avatar</div>
+			<div class="field-field"><input type="text" id="avatar" value="<?=$_SESSION["MORTI-avatar"]?>" disabled="disabled"/></div>
+			<div class="field-description">Los usuarios con permisos especiales, como tú, no pueden cambiar el avatar</div>
 			<?php } else { ?>
-			<div class="field_field"><input type="text" id="avatar" value="<?=$_SESSION["MORTI-avatar"]?>"/></div>
+			<div class="field-field"><input type="text" id="avatar" value="<?=$_SESSION["MORTI-avatar"]?>"/></div>
 			<?php } ?>
 		</div>
 		<div class="form-field">
-			<div class="field_title">Nuevo password</div>
-			<div class="field_field"><input type="password" id="new_pass"/></div>
+			<div class="field-title">Nuevo password</div>
+			<div class="field-field"><input type="password" id="new_pass"/></div>
 		</div>
 		<div class="form-field">
-			<div class="field_title">Confirmar nuevo password</div>
-			<div class="field_field"><input type="password" id="confirm_new_pass"/></div>
-			<div class="field_description">Recuerda, hamijo, que los passwords tienen que coincidir</div>
+			<div class="field-title">Confirmar nuevo password</div>
+			<div class="field-field"><input type="password" id="confirm_new_pass"/></div>
+			<div class="field-description">Recuerda, hamijo, que los passwords tienen que coincidir</div>
 		</div>
 		<div class="form-field">
-			<div class="field_title">Viejo password</div>
-			<div class="field_field"><input type="password" id="old_pass"/></div>
-			<div class="field_description">Necesario si quieres cambiar algun dato</div>
+			<div class="field-title">Viejo password</div>
+			<div class="field-field"><input type="password" id="old_pass"/></div>
+			<div class="field-description">Necesario si quieres cambiar algun dato</div>
 		</div>
-		<input type="button" onClick="submitProfile()" value="Enviar"/>
+		<input class="button" type="button" onClick="submitProfile()" value="Enviar"/>
 	</div>
