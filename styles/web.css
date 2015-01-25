@@ -70,6 +70,13 @@ body.reader {
 	color:#333;
 }
 
+body.reader .page-title {
+	font-size: 38pt;
+	color: #333;
+	font-family: Broadsheet;
+	margin-bottom:15px;
+}
+
 /*************************************************
 ****** Reader - Side menu
 *************************************************/
@@ -366,6 +373,56 @@ body.reader .related_link {
 /*************************************************
 ****** Reader - Export
 *************************************************/
+
+body.reader .export-section  {
+	border: 5px solid #888;
+	min-width:30%;
+	border-radius: 8px;
+	float:left;
+}
+
+body.reader .export-section div {
+	margin: 0 10px;
+}
+
+body.reader .export-section .section-title {
+	font-size:14pt;
+	font-family: Vegur;
+	background-color: #888;
+	color:white;
+	padding:5px 15px;
+	margin: 0 0 5px;
+}
+
+body.reader .select-all {
+	border: 1px dotted #666;
+	font-size:8pt;
+	font-family: Vegur;
+	font-weight: bold;
+	background-color: white;
+	text-align: center;
+	padding:3px;
+	float:right;
+}
+
+body.reader .select-all a {
+	text-decoration: none;
+	color: #666;
+}
+
+body.reader .select-all a:hover {
+	text-decoration: underline;
+	color: #333;
+}
+
+body.reader .export-section {
+
+}
+
+body.reader .export-submit {
+	clear:left;
+	padding-top:30px;
+}
 
 /*************************************************
 ****** Reader - Profile

@@ -8,12 +8,14 @@
 		return date('dM_Hi');
 	}
 
-	function makePDF ($config) {
+	function makePDF ($config, $chapters) {
+		$chapArray = explode(',',$chapters);
 		$pdf = new FPDF('P','mm',$config["page_size"]);
 		$pdf->AddFont('Almendra','','Almendra-Regular.php');
 		addCover($pdf, $config);
-		addChapter($pdf, $config, 1);
-		addChapter($pdf, $config, 2);
+		foreach ($chapArray as &$chapterId) {
+			addChapter($pdf, $config, intval($chapterId));
+		}
 		$pdf->Output('morti_' . generateTimeStamp() .'.pdf','D');
 	}
 
@@ -135,5 +137,7 @@
 		return $config;
 	}
 	
-	makePDF(generate_config());
+	$chapters = $_GET["ids"];
+	if (!isset($chapters)) $chapters = "";
+	makePDF(generate_config(), $chapters);
 ?>

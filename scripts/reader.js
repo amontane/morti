@@ -86,12 +86,20 @@ function submitProfile() {
 }
 
 function selectAllChapters() {
-	$(".chapter-check").attr("checked", true);
+	$(".chapter-check").each(function () { this.checked = true; });
 }
 
 function exportPDF() {
-	// TODO: gather parameters
-	window.location = "../actions/pdf-loader.php?"; //TODO: pass parameters
+	var ids = "";
+	$(".chapter-check").each(function () {
+		if (this.checked) {
+			if (ids != "") {
+				ids = ids+ ",";
+			}
+			ids = ids + this.value;
+		}
+	});
+	window.location = "../actions/pdf-loader.php?ids=" + ids;
 }
 
 function setMarker (chapterId, markerNumber) {
