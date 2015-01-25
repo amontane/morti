@@ -18,25 +18,25 @@
 		}
 
 		if (isset($author)) {
-			echo ('<div class="author">('. htmlspecialchars($author) . ')</div>');
+			echo ('&nbsp;<div class="author">('. htmlspecialchars($author) . ')</div>');
 		}
 
 		echo ('</div>');
 		
 		echo ('<ul>');
-		echo ('<li><a href="#" onClick="showMarkers(true)">Fijar punto de libro</a></li>');
-		echo ('<li><a href="#" onClick="showCommentMarkers(true)">Comentar párrafo específico</a></li>');
+		echo ('<a href="#" onClick="showMarkers(true)"><li>Fijar el punto de libro</li></a>');
+		echo ('<a href="#" onClick="showCommentMarkers(true)"><li>Comentar un párrafo específico</li></a>');
 		echo ('</ul>');
 
 		echo ('<ul>');
-		echo ('<li><a href="#marker-start">Inicio</a></li>');
+		echo ('<a href="#marker-start"><li>Inicio del capítulo</li></a>');
 
 		if (isset($additional)) {
-			echo ('<li><a href="#marker-meanwhile">Mientras tanto...</a></li>');
+			echo ('<a href="#marker-meanwhile"><li>Mientras tanto...</li></a>');
 		}
 
-		echo ('<li><a href="#marker-comments">Comentarios</a></li>');
-		echo ('<li><a href="#marker-newcomment">Nuevo comentario</a></li>');
+		echo ('<a href="#marker-comments"><li>Comentarios</li></a>');
+		echo ('<a href="#marker-newcomment"><li>Nuevo comentario</li></a>');
 		echo ('</ul>');
 	}
 ?>

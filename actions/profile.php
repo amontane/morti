@@ -34,9 +34,9 @@
 		$chapterId = $_POST["marker_chapter"];
 		$paragraph = $_POST["marker_paragraph"];
 		set_marker ($chapterId, $paragraph);
-		echo ('<li>');
-		echo ('<a href="#" onClick="openChapter('.$chapterId.','.$paragraph.')">Punto de libro</a>');
-		echo ('</li>');
+		echo ('<a href="#" onClick="openChapter('.$chapterId.','.$paragraph.')">');
+		echo ('<li>Punto de libro</li>');
+		echo ('</a>');
 		die();
 	}
 ?>

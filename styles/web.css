@@ -1,17 +1,81 @@
+/*************************************************
+****** General properties
+*************************************************/
+
 body {
 	padding:0;
 	margin:0;
 }
+
+/*************************************************
+****** Login screen
+*************************************************/
+
+body.login {
+	overflow:hidden;
+}
+
+body.login .bgdiv {
+	display:block;
+	position:absolute;
+	top:-40%;
+	left:-25%;
+	z-index:-1;
+}
+
+body.login .logodiv {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:100px;
+}
+
+body.login .celldiv {
+	display:block;
+	margin-left:auto;
+	margin-right:auto
+}
+
+body.login .form-row {
+	text-align: center;
+	padding: 5px 0;
+}
+
+body.login form {
+	margin:0 auto;
+	margin-top:50px;
+	width:80%;
+}
+
+body.login input.field {
+	width: 100%;
+	height: 30px;
+}
+
+body.login input.button {
+	min-width:200px;
+	width:40%;
+	height: 50px;
+	background-color: #606099;
+	color:white;
+	font-size:24px;
+}
+/*************************************************
+****** Reader - General
+*************************************************/
 
 body.reader {
 	background-color: white;
 	color:#333;
 }
 
+/*************************************************
+****** Reader - Side menu
+*************************************************/
+
 body.reader #side-menu {
 	background-color: #909090;
-	color: white;
-	width: 180px;
+	width: 250px;
 	height:100%;
 	position:absolute;
 	left:0px;
@@ -23,12 +87,12 @@ body.reader #side-menu {
 }
 
 body.reader.folded #side-menu {
-	left:-180px;
+	left:-250px;
 }
 
 body.reader #toggle_button {
 	position: absolute;
-	left:180px;
+	left:250px;
 	width:20px;
 	height:100%;
 	background-color: #909090;
@@ -46,10 +110,54 @@ body.reader.folded #toggle_button {
 	background-image: url('../img/right.png');
 }
 
+body.reader #side-menu .side-menu-title {
+	font-family: Almendra;
+	font-size: 18pt;
+	color: #e7e7c7;
+	border-bottom: 1px solid #c7c7a7;
+	margin-left:10px;
+
+}
+
+body.reader #side-menu .side-menu-title .author {
+	display:inline;
+	font-size: 16pt;
+	color: #c7c7a7;
+}
+
+body.reader #side-menu ul {
+	list-style-type: none;
+	margin-left:15px;
+	padding:0px;
+}
+
+body.reader #side-menu a {
+	text-decoration: none;
+}
+
+body.reader #side-menu ul li {
+	list-style-type: none;
+	margin:5px 0px;
+	padding:7px;
+	background-color: #606060;
+	color:white;
+	font-size:14pt;
+	font-family: Aver;
+}
+
+body.reader #side-menu ul li:hover {
+	background-color: #404040;
+	color:#b0b0ff;
+}
+
+/*************************************************
+****** Reader - Content
+*************************************************/
+
 body.reader #content-container {
 	z-index:1;
 	overflow-y:scroll;
-	padding-left:200px;
+	padding-left:270px;
 	background-color: transparent;
 	position:absolute;
 	min-width:100%;
@@ -64,16 +172,6 @@ body.reader #content-container {
 
 body.reader.folded #content-container {
 	padding-left:20px;
-}
-
-body.reader #side-menu a {
-	color: white;
-	text-decoration:none;
-}
-
-body.reader #side-menu a:hover {
-	color: yellow;
-	text-decoration:underline;
 }
 
 body.reader #chapter {

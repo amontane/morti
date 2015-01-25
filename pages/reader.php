@@ -21,9 +21,9 @@
 	$list = get_chapter_list();
 	for ($i=0; $i<sizeof($list); $i++) {
 ?>
-					<li>
-						<a href='#' onClick='openChapter(<?=$list[$i][0]?>)'><?=$list[$i][2]?></a>
-					</li>
+					<a href='#' onClick='openChapter(<?=$list[$i][0]?>)'>
+						<li><?=$list[$i][2]?></li>
+					</a>
 <?php
 	}
 ?>
@@ -39,20 +39,20 @@
 						<?php
 						$markerRow = get_marker(); 
 						if($markerRow) {
-							echo ('<li>');
-							echo ('<a href="#" onClick="openChapter('.$markerRow[0].','.$markerRow[1].')">Punto de libro</a>');
-							echo ('</li>');
+							echo ('<a href="#" onClick="openChapter('.$markerRow[0].','.$markerRow[1].')">');
+							echo ('<li>Punto de libro</li>');
+							echo ('</a>');
 						}?>
 					</div>
-					<li>
-						<a href="#" onClick="show_profile()">Perfil</a>
-					</li>
-					<li>
-						<a href="#" onClick="show_export()">Exportar</a>
-					</li>
-					<li>
-						<a href="../actions/logout.php">Logout</a>
-					</li>
+					<a href="#" onClick="show_profile()">
+						<li>Perfil</li>
+					</a>
+					<a href="#" onClick="show_export()">
+						<li>Exportar</li>
+					</a>
+					<a href="../actions/logout.php">
+						<li>Logout</li>
+					</a>
 				</ul>
 			</div>
 
