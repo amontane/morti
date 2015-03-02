@@ -249,10 +249,22 @@ body.reader .comment_wrapper:last-child {
 	margin-bottom:25px;
 }
 
+body.reader .comment_wrapper .avatar-holder {
+	margin-right:10px;
+	padding:5px;
+	float:left;
+}
+
+body.reader .comment_wrapper .avatar-holder.silver {
+	background-image: url('../img/silver.png');
+}
+
+body.reader .comment_wrapper .avatar-holder.gold {
+	background-image: url('../img/gold.png');
+}
+
 body.reader .comment_wrapper .avatar {
 	border:2px solid black;
-	margin-right:10px;
-	float:left;
 }
 
 body.reader .comment_wrapper .username a {

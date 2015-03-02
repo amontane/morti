@@ -47,8 +47,15 @@
 		$text = $comment_structure[5];
 		$date = $comment_structure[6];
 		$paragraph = $comment_structure[7];
+		$permissions = $comment_structure[8];
 
-		echo ('<div class="comment_wrapper"><img class="avatar" src="' . $avatar . '" height="80px" width="80px" align="top"/>');
+		$holderClass = '';
+		if ($permissions == 1) {
+			$holderClass = ' silver';
+		} else if ($permissions == 2) {
+			$holderClass = ' gold';
+		}
+		echo ('<div class="comment_wrapper"><div class="avatar-holder' . $holderClass . '"><img class="avatar" src="' . $avatar . '" height="66px" width="66px" align="top"/></div>');
 		echo ('<div class="username"><a href="mailto:'.htmlspecialchars($email).'">'. htmlspecialchars($username) .'</a></div>');
 		echo ('<div class="date">' . htmlspecialchars(pretty_date($date)) . '</div><br/>');
 		if (isset($paragraph)) {

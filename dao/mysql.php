@@ -50,7 +50,7 @@
 		$link = new mysqli('localhost', $GLOBALS["MORTI_mysql_user"], $GLOBALS["MORTI_mysql_pass"], $GLOBALS["MORTI_mysql_db"]) or die ('Die');
 		mysqli_set_charset($link, "UTF8");
 		// TODO: Error check?
-		$query = "SELECT c.id, u.email, u.username, u.avatar, c.chapter_id, c.text, c.date, c.paragraph FROM comment c, user u where u.email = c.author AND c.chapter_id = " . mysqli_real_escape_string($link, $id);
+		$query = "SELECT c.id, u.email, u.username, u.avatar, c.chapter_id, c.text, c.date, c.paragraph, u.permissions FROM comment c, user u where u.email = c.author AND c.chapter_id = " . mysqli_real_escape_string($link, $id);
 		$result = mysqli_query($link, $query);
 		
 		$table = array();
