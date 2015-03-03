@@ -7,12 +7,18 @@
 	$_SESSION["MORTI-selected-chapter"] = $ident;
 	
 	if (isset($ident)) {
-		$chapter = get_chapter($ident);
+		$author = null;
+		$title = "Bug report";
+		$text = "bugreport.txt";
+		$additional = null;
+		if ($ident != $GLOBALS["bugReportChapter"]) {
+			$chapter = get_chapter($ident);
 
-		$author = $chapter[1];
-		$title = $chapter[2];
-		$text = $chapter[3];
-		$additional = $chapter[4];
+			$author = $chapter[1];
+			$title = $chapter[2];
+			$text = $chapter[3];
+			$additional = $chapter[4];
+		}
 
 		if (isset($title)) {
 			echo ('<div class="chapter-title">' . htmlspecialchars($title) . '</div>');

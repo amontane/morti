@@ -1,7 +1,5 @@
 <?php
-	$GLOBALS["MORTI_mysql_user"] = 's18d0439_morteh';
-	$GLOBALS["MORTI_mysql_pass"] = 'tonsasch1dt';
-	$GLOBALS["MORTI_mysql_db"] = 's18d0439_morti';
+	include 'credentials.php';
 	
 	function attempt_login ($email, $password) {
 		$link = new mysqli('localhost', $GLOBALS["MORTI_mysql_user"], $GLOBALS["MORTI_mysql_pass"], $GLOBALS["MORTI_mysql_db"]) or die ('Die');

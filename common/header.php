@@ -1,4 +1,5 @@
 <?php
+	$GLOBALS["bugReportChapter"] = 1984;
 	if (!isset($MORTI_title)) $MORTI_title = 'Los hijos de mortimer';
 ?>
 

@@ -4,7 +4,7 @@
 
 	$ident = $_GET["identifier"];
 	
-	if (isset($ident)) {
+	if (isset($ident) && $ident != $GLOBALS["bugReportChapter"]) {
 		$chapter = get_chapter($ident);
 
 		$author = $chapter[1];

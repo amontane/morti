@@ -3,7 +3,7 @@
 	include_once '../dao/mysql.php';
 	include_once '../dao/date.php';
 
-	$bugReportChapter = 1984;
+	$bugReportChapter = $GLOBALS["bugReportChapter"];
 
 	if (isset($_GET["chapterId"])) {
 		// First case: getting comments from a chapter id
@@ -27,8 +27,8 @@
 			$paragraph = $_POST["paragraph"];
 		}
 		$author = $_SESSION["MORTI-mail"];
-		if ($chapterId == $_SESSION["MORTI-selected-chapter"] || $chapterId == 1984) {
-			if (!isset($paragraph) || $chapterId == 1984) {
+		if ($chapterId == $_SESSION["MORTI-selected-chapter"] || $chapterId == $bugReportChapter) {
+			if (!isset($paragraph) || $chapterId == $bugReportChapter) {
 				insert_comment($chapterId, $commentText, $author);
 			} else {
 				insert_paragraph_comment($chapterId, $commentText, $author, $paragraph);
@@ -55,7 +55,7 @@
 		} else if ($permissions == 2) {
 			$holderClass = ' gold';
 		}
-		echo ('<div class="comment_wrapper"><div class="avatar-holder' . $holderClass . '"><img class="avatar" src="' . $avatar . '" height="66px" width="66px" align="top"/></div>');
+		echo ('<div class="comment_wrapper' . $holderClass . '"><div class="avatar-holder"><img class="avatar" src="' . $avatar . '" height="66px" width="66px" align="top"/></div>');
 		echo ('<div class="username"><a href="mailto:'.htmlspecialchars($email).'">'. htmlspecialchars($username) .'</a></div>');
 		echo ('<div class="date">' . htmlspecialchars(pretty_date($date)) . '</div><br/>');
 		if (isset($paragraph)) {

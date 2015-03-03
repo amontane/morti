@@ -153,6 +153,10 @@ body.reader #side-menu ul li {
 	font-family: Aver;
 }
 
+body.reader #side-menu ul li.important {
+	background-color: #602020;
+}
+
 body.reader #side-menu ul li:hover {
 	background-color: #404040;
 	color:#b0b0ff;
@@ -245,6 +249,14 @@ body.reader .comment_wrapper {
 	margin-bottom:5px;
 }
 
+body.reader .comment_wrapper.silver {
+	background-color:#b0b090;
+}
+
+body.reader .comment_wrapper.gold {
+	background-color:#333;
+}
+
 body.reader .comment_wrapper:last-child {
 	margin-bottom:25px;
 }
@@ -255,11 +267,11 @@ body.reader .comment_wrapper .avatar-holder {
 	float:left;
 }
 
-body.reader .comment_wrapper .avatar-holder.silver {
+body.reader .comment_wrapper.silver .avatar-holder {
 	background-image: url('../img/silver.png');
 }
 
-body.reader .comment_wrapper .avatar-holder.gold {
+body.reader .comment_wrapper.gold .avatar-holder {
 	background-image: url('../img/gold.png');
 }
 
@@ -267,9 +279,25 @@ body.reader .comment_wrapper .avatar {
 	border:2px solid black;
 }
 
+body.reader .comment_wrapper.silver .avatar {
+	border:2px solid #999;
+}
+
+body.reader .comment_wrapper.gold .avatar {
+	border:2px solid #666600;
+}
+
 body.reader .comment_wrapper .username a {
 	text-decoration: none;
 	color: #333;
+}
+
+body.reader .comment_wrapper.silver .username a {
+	color: #336;
+}
+
+body.reader .comment_wrapper.gold .username a {
+	color: #fff;
 }
 
 body.reader .comment_wrapper .username a:hover {
@@ -289,10 +317,17 @@ body.reader .comment_wrapper .date {
 	color:#666;
 }
 
+body.reader .comment_wrapper.gold .date {
+	color:#aaa;
+}
 body.reader .comment_wrapper .comment {
 	display:inline;
 	font-style: italic;
 	font-size:13pt;
+}
+
+body.reader .comment_wrapper.gold .comment {
+	color:#fff;
 }
 
 body.reader #comments .comments_title {
