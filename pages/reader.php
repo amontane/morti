@@ -63,15 +63,13 @@
 		<a id="toggle_button" href="#" onClick="toggle_side_menu()">
 		</a>
 		<div id="content-container">
-			<a name="marker-start"/>
+			<a name="marker-start"/></a>
 			<div id="chapter">
 			</div>
 
-			<a name="marker-comments"/>
+			<a name="marker-comments"></a>
 			<div id="comments">
 			</div>
-
-			<a name="marker-newcomment"/>
 		</div>
 
 <?php	

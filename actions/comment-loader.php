@@ -16,10 +16,11 @@
 			}
 			echo ('</div>');
 		}
+		echo('<a name="marker-newcomment"></a>');
 		echo('<div class="comments_title">Dejar un comentario</div>');
-		echo('<div id="paragraph_container"/>');
+		echo('<div id="paragraph_container"></div>');
 		echo ('<textarea id="new_comment"></textarea>');
-		echo ('<input class="button" type="button" value="Enviar" onClick="submitComment(' . $_GET["chapterId"] . ')">');
+		echo ('<input class="button" type="button" value="Enviar" onClick="submitComment(' . $_GET["chapterId"] . ')"/>');
 	} else if (isset($_POST["comment"])) {
 		$commentText = $_POST["comment"];
 		$chapterId = $_POST["chapter"];

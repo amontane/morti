@@ -6,6 +6,8 @@ function openChapter(id, paragraph) {
 			updateMenu(id);
 			if (paragraph != undefined) {
 				window.location.hash = '#paragraph_' + paragraph;
+			} else {
+				window.location.hash = '#marker-start';
 			}
 		}
 	);
@@ -127,7 +129,7 @@ function commentParagraph (summary, markerNumber) {
 	var content = '<div class="related_label">En referencia al p&aacute;rrafo: </div><div class="related_paragraph">&ldquo;' + summary + '&rdquo;</div>';
 	content = content + '<input id="related_paragraph_field" type="hidden" value="' + markerNumber + '"/><a href="#" class="related_link" onClick="removeRelated()">Eliminar referencia</a>';
 	$("#paragraph_container").html(content);
-	window.location = "#marker-newcomment";
+	window.location.hash = "#marker-newcomment";
 	showCommentMarkers(false);
 }
 
