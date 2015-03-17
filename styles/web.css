@@ -13,7 +13,7 @@ input.button {
 	padding: 0 50px;
 	background-color: #606099;
 	color:white;
-	font-size:24px;
+	font-size:24pt;
 }
 
 /*************************************************
@@ -58,7 +58,7 @@ body.login form {
 
 body.login input.field {
 	width: 100%;
-	height: 30px;
+	height: 30pt;
 }
 
 /*************************************************
@@ -83,7 +83,7 @@ body.reader .page-title {
 
 body.reader #side-menu {
 	background-color: #909090;
-	width: 250px;
+	width: 200pt;
 	height:100%;
 	position:absolute;
 	left:0px;
@@ -95,15 +95,16 @@ body.reader #side-menu {
 }
 
 body.reader.folded #side-menu {
-	left:-250px;
+	left:-200pt;
 }
 
 body.reader #toggle_button {
 	position: absolute;
-	left:250px;
-	width:20px;
+	left:200pt;
+	width:20pt;
 	height:100%;
 	background-color: #909090;
+	background-size: contain;
 	background-image: url('../img/left.png');
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -169,7 +170,7 @@ body.reader #side-menu ul li:hover {
 body.reader #content-container {
 	z-index:1;
 	overflow-y:scroll;
-	padding-left:270px;
+	padding-left:220pt;
 	background-color: transparent;
 	position:absolute;
 	min-width:100%;
@@ -183,7 +184,7 @@ body.reader #content-container {
 }
 
 body.reader.folded #content-container {
-	padding-left:20px;
+	padding-left:20pt;
 }
 
 body.reader #chapter {
@@ -205,6 +206,7 @@ body.reader .chapter-author {
 body.reader .chapter-content {
 	font-family: Vegur;
 	font-size: 12pt;
+	line-height: 1.5;
 	padding-bottom: 50px;
 }
 
@@ -221,6 +223,7 @@ body.reader .meanwhile {
 body.reader .additional-content {
 	font-family: Vegur;
 	font-size: 12pt;
+	line-height: 1.5;
 	padding-bottom: 10px;
 }
 
@@ -331,7 +334,7 @@ body.reader .comment_wrapper.gold .comment {
 }
 
 body.reader #comments .comments_title {
-	font-size:30px;
+	font-size:30pt;
 	font-family: NightStillComes;
 }
 
