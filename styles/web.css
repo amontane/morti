@@ -338,7 +338,8 @@ body.reader #comments .comments_title {
 	font-family: NightStillComes;
 }
 
-body.reader #comments #new_comment {
+body.reader #comments textarea#new_comment {
+	margin:15px 0;
 	padding:15px;
 	resize:none;
 	width:100%;

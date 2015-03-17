@@ -1,10 +1,19 @@
 En esta sección podéis comentarme todo lo que veáis que le falta a la aplicación, y yo lo iré haciendo cuando tenga tiempo. Recordad que soy un hombre muy ocupado y vago, así que sin presiones plz. De mayor a menor prioridad, la lista de cosas a hacer es esta:
 
+- Pagina por defecto para que no salga blanco
+- Mensajes de feedback cuando hay peticiones POST (errores, cambio de contraseña, etc)
 - Maquetación adaptativa para móviles
 - Opción para ocultar email desde el perfil (por si alguien no quiere que se vea)
+- Esconder comentarios viejunos
+- Detectar que hay comentarios nuevos
 - Responder a otros comentarios
-- Más opciones de exportación a pdf (modo din A4, por ejemplo)
+- Más opciones de exportación a pdf: modo din A4, epub
+- Actividad reciente en el profile
+- Almacenar más de un bookmark
+- Editar comentarios (todavía no sé si quiero que esto se haga)
 
 Por el momento, podéis poner los comentarios que queráis que os lo agradeceré eternamente. Oh, btw, si queréis chafardear el códifo fuente está abierto, http://github.com/amontane/morti por si os ayuda a entender un poco mejor la magnitud de la tragedia. Besos,
 
 El padre de la criatura.
+
+Last update de este fichero: 17-3 Saint Fucking Patrick
