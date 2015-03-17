@@ -88,7 +88,7 @@ body.reader #side-menu {
 	position:absolute;
 	left:0px;
 	z-index: 2;
-	overflow-y:auto;
+	overflow:hidden;
 	transition: left 1s;
 	-webkit-transition: left 1s;
 	-moz-transition: left 1s;
@@ -121,7 +121,7 @@ body.reader.folded #toggle_button {
 
 body.reader #side-menu .side-menu-title {
 	font-family: Almendra;
-	font-size: 18pt;
+	font-size: 21pt;
 	color: #e7e7c7;
 	border-bottom: 1px solid #c7c7a7;
 	margin-left:10px;
@@ -130,7 +130,7 @@ body.reader #side-menu .side-menu-title {
 
 body.reader #side-menu .side-menu-title .author {
 	display:inline;
-	font-size: 16pt;
+	font-size: 19pt;
 	color: #c7c7a7;
 }
 
@@ -147,10 +147,10 @@ body.reader #side-menu a {
 body.reader #side-menu ul li {
 	list-style-type: none;
 	margin:5px 0px;
-	padding:7px;
+	padding:10pt;
 	background-color: #606060;
 	color:white;
-	font-size:14pt;
+	font-size:16pt;
 	font-family: Aver;
 }
 

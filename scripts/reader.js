@@ -146,3 +146,9 @@ function showCommentMarkers (show) {
 		$("body").removeClass("show_comment_markers");
 	}
 }
+
+function loadPerfectScrollbar() {
+	$(document).ready(function(){
+		$("#side-menu").perfectScrollbar();
+	});
+}

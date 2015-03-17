@@ -71,6 +71,9 @@
 			<div id="comments">
 			</div>
 		</div>
+		<script>
+			loadPerfectScrollbar();
+		</script>
 
 <?php	
 	include '../common/footer.php';
