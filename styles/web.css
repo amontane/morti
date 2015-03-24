@@ -16,6 +16,33 @@ input.button {
 	font-size:24pt;
 }
 
+#error-frame {
+	text-decoration: none;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	margin:0px;
+	padding:10px;
+	background-color:#ffffaa;
+	opacity: 0;
+	z-index:-1;
+	text-align: center;
+	color: #6060cf;
+	transition: opaciy 1s;
+	-webkit-transition: opaciy 1s;
+	-moz-transition: opaciy 1s;
+}
+
+#error-frame.shown {
+	opacity: 0.8;
+	z-index:20;
+}
+
+#error-frame.hover {
+	background-color: #ffffcc;
+}
+
 /*************************************************
 ****** Login screen
 *************************************************/
@@ -352,6 +379,7 @@ body.reader #comments textarea#new_comment {
 
 body.reader .chapter-content p {
 	position: relative;
+	margin:13pt 0;
 }
 
 body.reader .marker_setter {
@@ -507,4 +535,56 @@ body.reader .profile .form-field .field-description {
 
 body.reader .profile .button {
 	clear:right;
+}
+/*************************************************
+****** Reader - Initial
+*************************************************/
+
+body.reader .initial .title {
+	font-size: 38pt;
+	color: #333;
+	font-family: Broadsheet;
+	margin-bottom:15px;
+}
+
+body.reader .initial .text_block,
+body.reader .initial ul li {
+	padding: 10px 0;
+	color:#333;
+	font-family: Vegur;
+	font-size: 12pt;
+	line-height: 1.4;
+}
+
+body.reader .initial .subtitle {
+	margin-top: 20pt;
+	font-family: Almendra;
+	color:#333;
+	font-size: 21pt;
+}
+
+body.reader .initial .clarification {
+	font-family: Almendra;
+	color: #999;
+	font-size: 13pt;
+}
+
+body.reader .initial .holder {
+	display:inline-block;
+	width:15pt;
+	height:15pt;
+	background-size: contain;
+}
+
+body.reader .initial .arrow {
+	background-color: #909090;
+	background-image: url('../img/left.png');
+}
+
+body.reader .initial .comm {
+	background-image: url('../img/comment.png');
+}
+
+body.reader .initial .marker {
+	background-image: url('../img/marker.png');
 }

@@ -18,5 +18,8 @@
 			</div>
 		</form>
 <?php	
+	if (isset($_GET["error"])) {
+		echo ("<script>showFeedback('" . $GLOBALS["errorMessages"]["loginError"] . "')</script>");
+	}
 	include '../common/footer.php';
 ?>

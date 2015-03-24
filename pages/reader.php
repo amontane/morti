@@ -1,7 +1,7 @@
 <?php
 	include_once '../common/session_protection.php';
 	$MORTI_body_class = 'reader';
-	$MORTI_load_scripts = true;
+	$MORTI_load_reader_scripts = true;
 	include_once '../dao/mysql.php';
 	include_once '../dao/user.php';
 	include_once '../dao/files.php';
@@ -65,6 +65,9 @@
 		<div id="content-container">
 			<a name="marker-start"/></a>
 			<div id="chapter">
+				<?php
+					include '../actions/initial.php';
+				?>
 			</div>
 
 			<a name="marker-comments"></a>

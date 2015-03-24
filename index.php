@@ -11,7 +11,7 @@
 	}
 	if (!isset ($MORTI_loginerror)) $MORTI_loginerror = "";
 	if (!is_valid_session()) {
-		header("Location: pages/login.php?" . $MORTI_loginerror);
+		header("Location: pages/login.php?error=" . $MORTI_loginerror);
 	} else {
 		header("Location: pages/reader.php");
 	}
