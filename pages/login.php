@@ -18,8 +18,12 @@
 			</div>
 		</form>
 <?php	
-	if (isset($_GET["error"])) {
-		echo ("<script>showFeedback('" . $GLOBALS["errorMessages"]["loginError"] . "')</script>");
+	if (isset($_GET["logout"])) {
+		echo ("<script>showFeedback('" . htmlentities($_kFeedbackMessages["logout"]) . "')</script>");
+	} else if (isset($_GET["error"])) {
+		echo ("<script>showErrorFeedback('" . htmlentities($_kFeedbackMessages["loginError"]) . "')</script>");
+	} else if (isset($_GET["session_invalid"])) {
+		echo ("<script>showErrorFeedback('" . htmlentities($_kFeedbackMessages["sessionExpired"]) . "')</script>");
 	}
 	include '../common/footer.php';
 ?>

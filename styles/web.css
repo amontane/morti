@@ -7,6 +7,10 @@ body {
 	margin:0;
 }
 
+feedbackMessage, feedbackError {
+	display: none;
+}
+
 input.button {
 	min-width:200px;
 	height: 50px;
@@ -34,9 +38,17 @@ input.button {
 	-moz-transition: opaciy 1s;
 }
 
+#error-frame.error {
+	background-color:#ffaaaa;
+}
+
 #error-frame.shown {
 	opacity: 0.8;
 	z-index:20;
+}
+
+#error-frame.hover.error {
+	background-color: #ffcccc;
 }
 
 #error-frame.hover {

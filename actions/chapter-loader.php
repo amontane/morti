@@ -11,7 +11,7 @@
 		$title = "Bug report";
 		$text = "bugreport.txt";
 		$additional = null;
-		if ($ident != $GLOBALS["bugReportChapter"]) {
+		if ($ident != $_kBugReportChapter) {
 			$chapter = get_chapter($ident);
 
 			$author = $chapter[1];

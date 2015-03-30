@@ -9,9 +9,11 @@
 			perform_login($result);
 		}
 	}
-	if (!isset ($MORTI_loginerror)) $MORTI_loginerror = "";
+	$MORTI_loginstatus = $_SESSION["MORTI_loginstatus"];
+	unset($_SESSION["MORTI_loginstatus"]);
+	if (!isset ($MORTI_loginstatus)) $MORTI_loginstatus = "";
 	if (!is_valid_session()) {
-		header("Location: pages/login.php?error=" . $MORTI_loginerror);
+		header("Location: pages/login.php?" . $MORTI_loginstatus);
 	} else {
 		header("Location: pages/reader.php");
 	}

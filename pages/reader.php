@@ -44,7 +44,7 @@
 							echo ('</a>');
 						}?>
 					</div>
-					<a href="#" onClick="openChapter(<?= $GLOBALS["bugReportChapter"];?>)"/>
+					<a href="#" onClick="openChapter(<?= $_kBugReportChapter;?>)"/>
 						<li class="important">Bug report</li>
 					</a>
 					<a href="#" onClick="show_profile()">

@@ -39,6 +39,7 @@ function submitComment(chapterId) {
  	$.post("../actions/comment-loader.php",
  		{chapter: chapterId, comment: text, paragraph: paragraph},
  		function(data) {
+ 			decodeResponseForFeedback(data);
  			loadComments(chapterId);
  		}
  	);
@@ -81,6 +82,7 @@ function submitProfile() {
 	$.post("../actions/profile.php",
 		{avatar:avatar, uname:uname, new_pass:new_pass, conf_new_pass:conf_new_pass, old_pass:old_pass},
 		function(data) {
+			decodeResponseForFeedback(data);
 			$("#chapter").html(data);
 			$("#comments").html('');
 		}
@@ -108,6 +110,7 @@ function setMarker (chapterId, markerNumber) {
 		$.post("../actions/profile.php",
  		{marker_chapter: chapterId, marker_paragraph: markerNumber},
  		function(data) {
+ 			decodeResponseForFeedback(data);
  			$("#marker_link_holder").html(data);
  		}
  	);

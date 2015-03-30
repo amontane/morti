@@ -3,8 +3,6 @@
 	include_once '../dao/mysql.php';
 	include_once '../dao/date.php';
 
-	$bugReportChapter = $GLOBALS["bugReportChapter"];
-
 	if (isset($_GET["chapterId"])) {
 		// First case: getting comments from a chapter id
 		$comments = get_comments_for_chapter($_GET["chapterId"]);
@@ -28,15 +26,21 @@
 			$paragraph = $_POST["paragraph"];
 		}
 		$author = $_SESSION["MORTI-mail"];
-		if ($chapterId == $_SESSION["MORTI-selected-chapter"] || $chapterId == $bugReportChapter) {
-			if (!isset($paragraph) || $chapterId == $bugReportChapter) {
-				insert_comment($chapterId, $commentText, $author);
+		if ($chapterId == $_SESSION["MORTI-selected-chapter"] || $chapterId == $_kBugReportChapter) {
+			$success;
+			if (!isset($paragraph) || $chapterId == $_kBugReportChapter) {
+				$success = insert_comment($chapterId, $commentText, $author);
 			} else {
-				insert_paragraph_comment($chapterId, $commentText, $author, $paragraph);
+				$success = insert_paragraph_comment($chapterId, $commentText, $author, $paragraph);
+			}
+			if ($success) {
+				echo('<feedbackMessage>'.htmlentities($_kFeedbackMessages["commentOK"]).'</feedbackMessage>');
+			} else {
+				echo('<feedbackError/><feedbackMessage>'.htmlentities($_kFeedbackMessages["commentNOK"]).'</feedbackMessage>');
 			}
 		}
 	} else {
-		echo("error!");
+		echo('<feedbackError/><feedbackMessage>'.htmlentities($_kFeedbackMessages["error"]).'</feedbackMessage>');
 	}
 
 	function paint_comment($comment_structure) {

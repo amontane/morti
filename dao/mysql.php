@@ -13,6 +13,7 @@
 			return $row;
 		}
 		
+		$_SESSION["MORTI_loginstatus"] = "error";
 		return false;
 	}
 	

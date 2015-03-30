@@ -1,7 +1,5 @@
 <?php
-	$GLOBALS["bugReportChapter"] = 1984;
-	$GLOBALS["errorMessages"] = array();
-	$GLOBALS["errorMessages"]["loginError"] = "El usuario o el password son incorrectos";
+	include_once 'constants.php';
 
 	if (!isset($MORTI_title)) $MORTI_title = 'Los hijos de mortimer';
 ?>
