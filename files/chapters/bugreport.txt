@@ -1,6 +1,5 @@
 En esta sección podéis comentarme todo lo que veáis que le falta a la aplicación, y yo lo iré haciendo cuando tenga tiempo. Recordad que soy un hombre muy ocupado y vago, así que sin presiones plz. De mayor a menor prioridad, la lista de cosas a hacer es esta:
 
-- Mensajes de feedback cuando hay peticiones POST (errores, cambio de contraseña, etc)
 - Maquetación adaptativa para móviles
 - Opción para ocultar email desde el perfil (por si alguien no quiere que se vea)
 - Esconder comentarios viejunos
