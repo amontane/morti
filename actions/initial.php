@@ -25,7 +25,7 @@
 			<li>
 				<strong>Comentar un p&aacute;rrafo espec&iacute;fico</strong> permite hacer un comentario sobre un p&aacute;rrafo concreto.
 				Funciona de modo muy parecido, si pulsamos encima del bot&oacute;n veremos encima de cada p&aacute;rrafo un mont&oacute;n de botoncitos
-				<div class="comm holder"></div>. Si pulsamos encima, iremos directamente hacia la funci&oacute;n de comentario, con una pequeña variaci&oacute;n:
+				<div class="comm holder"></div>. Si pulsamos encima, iremos directamente hacia la funci&oacute;n de comentario, con una peque&ntilde;a variaci&oacute;n:
 				estaremos marcando un comentario como referencia. Esta funci&oacute;n es &uacute;til sobretodo para reportar errores en el texto. Recordad que os
 				agradezco todo el feedback que me pod&aacute;is dar.
 			</li>
@@ -60,4 +60,7 @@
 				<strong>Logout</strong> chapa la sesi&oacute;n. Buuum!
 			</li>
 		</ul>
+		<div class="text_block">
+			Poco m&aacute;s que a&ntilde;adir. &iexcl;Espero que os guste! O que, por lo menos, no os deprima y/o asquee...
+		</div>
 	</div>

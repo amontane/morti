@@ -1,0 +1,324 @@
+/*************************************************
+****** General properties
+*************************************************/
+
+body {
+}
+
+input.button {
+}
+
+#error-frame {
+}
+
+#error-frame.error {
+}
+
+#error-frame.shown {
+}
+
+#error-frame.hover.error {
+}
+
+#error-frame.hover {
+}
+
+/*************************************************
+****** Login screen
+*************************************************/
+
+body.login {
+}
+
+body.login .bgdiv {
+}
+
+body.login .logodiv {
+}
+
+body.login .celldiv {
+}
+
+body.login .form-row {
+}
+
+body.login form {
+}
+
+body.login input.field {
+}
+
+/*************************************************
+****** Reader - General
+*************************************************/
+
+body.reader {
+}
+
+body.reader .page-title {
+}
+
+/*************************************************
+****** Reader - Side menu
+*************************************************/
+
+body.reader #side-menu {
+}
+
+body.reader.folded #side-menu {
+}
+
+body.reader #toggle_button {
+}
+
+body.reader.folded #toggle_button {
+}
+
+body.reader #side-menu .side-menu-title {
+}
+
+body.reader #side-menu .side-menu-title .author {
+}
+
+body.reader #side-menu ul {
+}
+
+body.reader #side-menu a {
+}
+
+body.reader #side-menu ul li {
+}
+
+body.reader #side-menu ul li.important {
+}
+
+body.reader #side-menu ul li:hover {
+}
+
+/*************************************************
+****** Reader - Content
+*************************************************/
+
+body.reader #content-container {
+}
+
+body.reader.folded #content-container {
+}
+
+body.reader #chapter {
+}
+
+body.reader .chapter-title {
+}
+
+body.reader .chapter-author {
+}
+
+body.reader .chapter-content {
+}
+
+body.reader .chapter-content p.short{
+}
+
+body.reader .meanwhile {
+}
+
+body.reader .additional-content {
+}
+
+body.reader .additional-content ul {
+}
+
+body.reader .additional-content ul li:before {
+}
+
+/*************************************************
+****** Reader - Comments
+*************************************************/
+
+body.reader #comments {
+}
+
+body.reader .comment_wrapper {
+}
+
+body.reader .comment_wrapper.silver {
+}
+
+body.reader .comment_wrapper.gold {
+}
+
+body.reader .comment_wrapper:last-child {
+}
+
+body.reader .comment_wrapper .avatar-holder {
+}
+
+body.reader .comment_wrapper.silver .avatar-holder {
+}
+
+body.reader .comment_wrapper.gold .avatar-holder {
+}
+
+body.reader .comment_wrapper .avatar {
+}
+
+body.reader .comment_wrapper.silver .avatar {
+}
+
+body.reader .comment_wrapper.gold .avatar {
+}
+
+body.reader .comment_wrapper .username a {
+}
+
+body.reader .comment_wrapper.silver .username a {
+}
+
+body.reader .comment_wrapper.gold .username a {
+}
+
+body.reader .comment_wrapper .username a:hover {
+}
+
+body.reader .comment_wrapper .username {
+}
+
+body.reader .comment_wrapper .date {
+}
+
+body.reader .comment_wrapper.gold .date {
+}
+
+body.reader .comment_wrapper .comment {
+}
+
+body.reader .comment_wrapper.gold .comment {
+}
+
+body.reader #comments .comments_title {
+}
+
+body.reader #comments textarea#new_comment {
+}
+
+/*************************************************
+****** Reader - Markers
+*************************************************/
+
+body.reader .chapter-content p {
+}
+
+body.reader .marker_setter {
+}
+
+body.reader .comment_paragraph {
+}
+
+body.reader.show_markers .marker_setter,
+body.reader.show_comment_markers .comment_paragraph {
+}
+
+body.reader.show_markers a.marker_setter:hover,
+body.reader.show_comment_markers a.comment_paragraph:hover {
+}
+
+body.reader .inreference {
+}
+
+body.reader .inreference a {
+}
+
+body.reader .inreference a:hover{
+}
+
+body.reader .related_label {
+}
+
+body.reader .related_paragraph {
+}
+
+body.reader .related_link {
+}
+
+/*************************************************
+****** Reader - Export
+*************************************************/
+
+body.reader .export-section  {
+}
+
+body.reader .export-section div {
+}
+
+body.reader .export-section .section-title {
+}
+
+body.reader .select-all {
+}
+
+body.reader .select-all a {
+}
+
+body.reader .select-all a:hover {
+}
+
+body.reader .export-section {
+}
+
+body.reader .export-submit {
+}
+
+/*************************************************
+****** Reader - Profile
+*************************************************/
+
+body.reader .profile .user-avatar-big {
+}
+
+body.reader .profile .form-field {
+}
+
+body.reader .profile .form-field .field-title {
+}
+
+body.reader .profile .form-field .field-field {
+}
+
+body.reader .profile .form-field .field-field input {
+}
+
+body.reader .profile .form-field .field-description {
+}
+
+body.reader .profile .button {
+}
+
+/*************************************************
+****** Reader - Initial
+*************************************************/
+
+body.reader .initial .title {
+}
+
+body.reader .initial .text_block,
+body.reader .initial ul li {
+}
+
+body.reader .initial .subtitle {
+}
+
+body.reader .initial .clarification {
+}
+
+body.reader .initial .holder {
+}
+
+body.reader .initial .arrow {
+}
+
+body.reader .initial .comm {
+}
+
+body.reader .initial .marker {
+}
