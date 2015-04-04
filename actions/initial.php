@@ -1,6 +1,6 @@
 
 	<div class="initial">
-		<div class="title">Bienvenido!</div>
+		<div class="page-title">Bienvenido!</div>
 		<div class="text_block">
 			&iexcl;Hola! &iexcl;Bienvenido a este horrible proyecto de Crowd Editing! Te preguntar&aacute;s: &iquest;qu&eacute; carajo es el Crowd editing?
 			Es muy sencillo, cuando el autor de un libro no tiene dinero para pagarse un editor (o es demasiado
@@ -12,7 +12,7 @@
 		<div class="text_block">
 			&iquest;C&oacute;mo funciona esto? Hay un men&uacute; lateral en el que ten&eacute;is todas las opciones.
 			Si no veis el men&uacute; de marras, es posible que teng&aacute;is que pinchar en el bot&oacute;n <div class="arrow holder"></div>
-			para desplegarlo. En el men&uacute; pod&eacute;is ver la lista de opciones, clasificadas en tres bloques:
+			de la izquierda para desplegarlo. En el men&uacute; pod&eacute;is ver la lista de opciones, clasificadas en tres bloques:
 		</div>
 		<div class="subtitle">Opciones de cap&iacute;tulo</div>
 		<div class="clarification">(estas opciones son visibles solamente cuando un cap&iacute;tulo est&aacute; seleccionado)</div>

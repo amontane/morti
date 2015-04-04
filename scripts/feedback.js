@@ -14,7 +14,7 @@ function feedbackFadeTimeoutCancel() {
 
 function feedbackFadeTrigger() {
 	feedbackFadeTimeoutCancel();
-	var division = $("#error-frame")
+	var division = $("#error-frame");
 	if (division) {
 		division.removeClass("hover");
 		division.removeClass("shown");
@@ -23,14 +23,14 @@ function feedbackFadeTrigger() {
 
 function feedbackMouseIn() {
 	feedbackFadeTimeoutCancel();
-	var division = $("#error-frame")
+	var division = $("#error-frame");
 	if (division) {
 		division.addClass("hover");
 	}
 }
 
 function feedbackMouseOut() {
-	var division = $("#error-frame")
+	var division = $("#error-frame");
 	if (division) {
 		division.removeClass("hover");
 	}
@@ -38,7 +38,7 @@ function feedbackMouseOut() {
 }
 
 function showFeedback(message) {
-	var division = $("#error-frame")
+	var division = $("#error-frame");
 	if (message && division) {
 		division.html(message);
 		division.removeClass("error");
@@ -49,7 +49,7 @@ function showFeedback(message) {
 }
 
 function showErrorFeedback(message) {
-	var division = $("#error-frame")
+	var division = $("#error-frame");
 	if (message && division) {
 		division.html(message);
 		division.addClass("error");

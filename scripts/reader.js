@@ -1,3 +1,7 @@
+function isMobile() {
+	return window.matchMedia('(max-device-width: 420px)').matches;
+}
+
 function openChapter(id, paragraph) {
 	$.get("../actions/chapter-loader.php?identifier=" + id,
 		function(data) {
@@ -154,4 +158,10 @@ function loadPerfectScrollbar() {
 	$(document).ready(function(){
 		$("#side-menu").perfectScrollbar();
 	});
+}
+
+function initMobileMenu() {
+	if (isMobile()) {
+		$("#side-menu ul a").click(function(){toggle_side_menu();});
+	}
 }

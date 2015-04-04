@@ -38,5 +38,6 @@
 		echo ('<a href="#marker-comments"><li>Comentarios</li></a>');
 		echo ('<a href="#marker-newcomment"><li>Nuevo comentario</li></a>');
 		echo ('</ul>');
+		echo ("<script>initMobileMenu()</script>");
 	}
 ?>

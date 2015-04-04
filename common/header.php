@@ -14,13 +14,12 @@
 		<script src="../scripts/perfect_scrollbar/perfect-scrollbar.jquery.min.js"></script>
 <?php } ?>
 		<link rel="stylesheet" type="text/css" href="../styles/fonts.css"/>
-		<!--  Responsive stuff  -->
-		<link rel="stylesheet" type="text/css" href="../styles/mobile.css" media="screen and (max-device-width:400px)" />
-		<link rel="stylesheet" type="text/css" href="../styles/mdpi.css" media="screen and (-webkit-min-device-pixel-ratio: 1)" />
-		<link rel="stylesheet" type="text/css" href="../styles/hdpi.css" media="screen and (-webkit-min-device-pixel-ratio: 2)" />
-		<link rel="stylesheet" type="text/css" href="../styles/xhdpi.css" media="screen and (-webkit-min-device-pixel-ratio: 3)" />
-		<!--  End of responsive stuff. Boy wasn't this heavy -->
 		<link rel="stylesheet" type="text/css" href="../styles/web.css" media="screen" />
+		<!--  Responsive stuff  -->
+		<link rel="stylesheet" type="text/css" href="../styles/mobile_mdpi.css" media="screen and (max-device-width:420px)" />
+		<link rel="stylesheet" type="text/css" href="../styles/mobile_hdpi.css" media="screen and (max-device-width:420px) and (-webkit-min-device-pixel-ratio: 2)" />
+		<link rel="stylesheet" type="text/css" href="../styles/mobile_xhdpi.css" media="screen and (max-device-width:420px) and (-webkit-min-device-pixel-ratio: 3)" />
+		<!--  End of responsive stuff. Boy wasn't this heavy -->
 		<link rel="stylesheet" type="text/css" href="../scripts/perfect_scrollbar/perfect-scrollbar.min.css" media="screen" />
 	</head>
 	<body<?php if(isset($MORTI_body_class)) {echo(' class="'.$MORTI_body_class.'"');}?>>

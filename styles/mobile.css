@@ -63,15 +63,22 @@ body.reader .page-title {
 *************************************************/
 
 body.reader #side-menu {
+	width:100%;
+	padding-right:300pt;
+	background-color:red;
 }
 
 body.reader.folded #side-menu {
+	left:-100%;
 }
 
 body.reader #toggle_button {
+	left:calc(100% - 20pt);
 }
 
 body.reader.folded #toggle_button {
+	left:0;
+	width:20pt;
 }
 
 body.reader #side-menu .side-menu-title {

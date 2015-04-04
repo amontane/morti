@@ -6,9 +6,15 @@ body {
 }
 
 input.button {
+	min-width:255pt;
+	height: 60pt;
+	padding: 0 45pt;
+	font-size:30pt;
 }
 
 #error-frame {
+	font-size:18pt;
+	padding:12pt;
 }
 
 #error-frame.error {
@@ -34,18 +40,24 @@ body.login .bgdiv {
 }
 
 body.login .logodiv {
+	margin-top:120pt;
 }
 
 body.login .celldiv {
 }
 
 body.login .form-row {
+	padding: 6pt 0;
 }
 
 body.login form {
+	margin-top:60pt;
+	width:80%;
 }
 
 body.login input.field {
+	width: 100%;
+	height: 45pt;
 }
 
 /*************************************************
@@ -56,6 +68,8 @@ body.reader {
 }
 
 body.reader .page-title {
+	font-size: 57pt;
+	margin-bottom:18pt;
 }
 
 /*************************************************
@@ -63,30 +77,42 @@ body.reader .page-title {
 *************************************************/
 
 body.reader #side-menu {
+	width:100%;
 }
 
 body.reader.folded #side-menu {
+	left:-100%;
 }
 
 body.reader #toggle_button {
+	left:calc(100% - 37pt);
+	width:37pt;
 }
 
 body.reader.folded #toggle_button {
+	left:0;
 }
 
 body.reader #side-menu .side-menu-title {
+	font-size: 31pt;
 }
 
 body.reader #side-menu .side-menu-title .author {
+	font-size: 28pt;
 }
 
 body.reader #side-menu ul {
+	margin-left:18pt;
 }
 
 body.reader #side-menu a {
 }
 
 body.reader #side-menu ul li {
+	margin:6pt 0;
+	padding:15pt;
+	font-size:24pt;
+	margin-right:37pt;
 }
 
 body.reader #side-menu ul li.important {
@@ -100,33 +126,49 @@ body.reader #side-menu ul li:hover {
 *************************************************/
 
 body.reader #content-container {
+	padding-left:37pt;
 }
 
 body.reader.folded #content-container {
+	padding-left:37pt;
 }
 
 body.reader #chapter {
+	padding:24pt;
 }
 
 body.reader .chapter-title {
+	font-size: 57pt;
+	padding-bottom: 24pt;
 }
 
 body.reader .chapter-author {
+	font-size: 24pt;
+	padding-bottom: 60pt;
 }
 
 body.reader .chapter-content {
+	font-size: 18pt;
+	padding-bottom: 60pt;
 }
 
 body.reader .chapter-content p.short{
+	margin-top: -18pt;
 }
 
 body.reader .meanwhile {
+	font-size: 36pt;
+	padding-bottom: 18pt;
 }
 
 body.reader .additional-content {
+	font-size: 18pt;
+	padding-bottom: 12pt;
 }
 
 body.reader .additional-content ul {
+	padding-left: 22pt;
+	text-indent: -12pt;
 }
 
 body.reader .additional-content ul li:before {
@@ -137,9 +179,13 @@ body.reader .additional-content ul li:before {
 *************************************************/
 
 body.reader #comments {
+	padding:24pt;
 }
 
 body.reader .comment_wrapper {
+	padding:18pt;
+	min-height: 90pt;
+	margin-bottom:6pt;
 }
 
 body.reader .comment_wrapper.silver {
@@ -149,9 +195,12 @@ body.reader .comment_wrapper.gold {
 }
 
 body.reader .comment_wrapper:last-child {
+	margin-bottom:30pt;
 }
 
 body.reader .comment_wrapper .avatar-holder {
+	margin-right:12pt;
+	padding:6pt;
 }
 
 body.reader .comment_wrapper.silver .avatar-holder {
@@ -182,9 +231,12 @@ body.reader .comment_wrapper .username a:hover {
 }
 
 body.reader .comment_wrapper .username {
+	padding-right:12pt;
+	font-size:14pt;
 }
 
 body.reader .comment_wrapper .date {
+	font-size:11pt;
 }
 
 body.reader .comment_wrapper.gold .date {
@@ -197,9 +249,13 @@ body.reader .comment_wrapper.gold .comment {
 }
 
 body.reader #comments .comments_title {
+	font-size:45pt;
 }
 
 body.reader #comments textarea#new_comment {
+	margin:18pt 0;
+	padding:18pt;
+	height:120pt;
 }
 
 /*************************************************
@@ -207,6 +263,7 @@ body.reader #comments textarea#new_comment {
 *************************************************/
 
 body.reader .chapter-content p {
+	margin:19pt 0;
 }
 
 body.reader .marker_setter {
@@ -224,6 +281,8 @@ body.reader.show_comment_markers a.comment_paragraph:hover {
 }
 
 body.reader .inreference {
+	padding-bottom:8pt;
+	font-size: 10pt;
 }
 
 body.reader .inreference a {
@@ -233,12 +292,17 @@ body.reader .inreference a:hover{
 }
 
 body.reader .related_label {
+	font-size:16pt;
 }
 
 body.reader .related_paragraph {
+	font-size:21pt;
 }
 
 body.reader .related_link {
+	font-size:12pt;
+	padding: 6pt 12pt 9pt;
+	margin-left:12pt;
 }
 
 /*************************************************
@@ -246,15 +310,25 @@ body.reader .related_link {
 *************************************************/
 
 body.reader .export-section  {
+	border: 6pt solid #606099;
+	border-radius: 12pt;
+	padding: 0 0 12pt;
 }
 
 body.reader .export-section div {
+	margin: 0 12pt;
 }
 
 body.reader .export-section .section-title {
+	font-size:21pt;
+	padding:6pt 18pt 12pt;
+	margin: 0 0 6pt;
 }
 
 body.reader .select-all {
+	border: 1px dotted #666;
+	font-size:12pt;
+	padding:4pt;
 }
 
 body.reader .select-all a {
@@ -267,6 +341,7 @@ body.reader .export-section {
 }
 
 body.reader .export-submit {
+	padding-top:36pt;
 }
 
 /*************************************************
@@ -277,41 +352,55 @@ body.reader .profile .user-avatar-big {
 }
 
 body.reader .profile .form-field {
+	margin: 0 0 24pt;
 }
 
 body.reader .profile .form-field .field-title {
+	font-size:13pt;
 }
 
 body.reader .profile .form-field .field-field {
 }
 
 body.reader .profile .form-field .field-field input {
+	height:24pt;
+	min-width:320pt;
+	width: calc(100% - 200pt);
 }
 
 body.reader .profile .form-field .field-description {
+	font-size:10pt;
 }
 
 body.reader .profile .button {
 }
-
 /*************************************************
 ****** Reader - Initial
 *************************************************/
 
 body.reader .initial .title {
+	font-size: 57pt;
+	margin-bottom:18pt;
 }
 
 body.reader .initial .text_block,
 body.reader .initial ul li {
+	padding: 12pt 0;
+	font-size: 18pt;
 }
 
 body.reader .initial .subtitle {
+	margin-top: 30pt;
+	font-size: 30pt;
 }
 
 body.reader .initial .clarification {
+	font-size: 20pt;
 }
 
 body.reader .initial .holder {
+	width:22pt;
+	height:22pt;
 }
 
 body.reader .initial .arrow {

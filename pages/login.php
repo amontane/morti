@@ -2,7 +2,6 @@
 	$MORTI_body_class = 'login';
 	include '../common/header.php';
 ?>	
-		<img class="bgdiv" src="../img/mortibg.jpg" width="150%"/>
 		<img class="logodiv" src="../img/morti-trans.png" width="80%"/>
 		<form id="login-form" method="POST" action="../index.php">
 			<div class="form-container celldiv">

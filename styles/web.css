@@ -7,30 +7,33 @@ body {
 	margin:0;
 }
 
+/* These two tags are for error detection purposes, just hide them */
 feedbackMessage, feedbackError {
 	display: none;
 }
 
 input.button {
-	min-width:200px;
-	height: 50px;
-	padding: 0 50px;
+	min-width:170pt;
+	height: 40pt;
+	padding: 0 30pt;
 	background-color: #606099;
 	color:white;
-	font-size:24pt;
+	font-size:20pt;
 }
 
 #error-frame {
+	font-size:12pt;
 	text-decoration: none;
 	position:absolute;
+	display:none;
 	top:0;
 	left:0;
 	width:100%;
-	margin:0px;
-	padding:10px;
+	margin:0;
+	padding:0;
 	background-color:#ffffaa;
 	opacity: 0;
-	z-index:-1;
+	z-index:20;
 	text-align: center;
 	color: #6060cf;
 	transition: opaciy 1s;
@@ -44,7 +47,8 @@ input.button {
 
 #error-frame.shown {
 	opacity: 0.8;
-	z-index:20;
+	display:inline-block;
+	padding:8pt;
 }
 
 #error-frame.hover.error {
@@ -60,22 +64,19 @@ input.button {
 *************************************************/
 
 body.login {
-	overflow:hidden;
+
 }
 
-body.login .bgdiv {
-	display:block;
-	position:absolute;
-	top:-40%;
-	left:-25%;
-	z-index:-1;
+body.login {
+	background-image: url("../img/mortibg.jpg");
+	background-size: cover;
 }
 
 body.login .logodiv {
 	display:block;
 	margin-left:auto;
 	margin-right:auto;
-	margin-top:100px;
+	margin-top:80pt;
 }
 
 body.login .celldiv {
@@ -86,18 +87,19 @@ body.login .celldiv {
 
 body.login .form-row {
 	text-align: center;
-	padding: 5px 0;
+	padding: 4pt 0;
 }
 
 body.login form {
 	margin:0 auto;
-	margin-top:50px;
+	margin-top:40pt;
 	width:80%;
 }
 
 body.login input.field {
 	width: 100%;
 	height: 30pt;
+	font-size:20pt;
 }
 
 /*************************************************
@@ -113,7 +115,7 @@ body.reader .page-title {
 	font-size: 38pt;
 	color: #333;
 	font-family: Broadsheet;
-	margin-bottom:15px;
+	margin-bottom:12pt;
 }
 
 /*************************************************
@@ -125,12 +127,12 @@ body.reader #side-menu {
 	width: 200pt;
 	height:100%;
 	position:absolute;
-	left:0px;
+	left:0;
 	z-index: 2;
 	overflow:hidden;
-	transition: left 1s;
-	-webkit-transition: left 1s;
-	-moz-transition: left 1s;
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
 }
 
 body.reader.folded #side-menu {
@@ -148,13 +150,13 @@ body.reader #toggle_button {
 	background-position: center center;
 	background-repeat: no-repeat;
 	z-index:3;
-	transition: left 1s;
-	-webkit-transition: left 1s;
-	-moz-transition: left 1s;
+	transition: left 0.3s;
+	-webkit-transition: left 0.3s;
+	-moz-transition: left 0.3s;
 }
 
 body.reader.folded #toggle_button {
-	left:0px;
+	left:0;
 	background-image: url('../img/right.png');
 }
 
@@ -163,8 +165,7 @@ body.reader #side-menu .side-menu-title {
 	font-size: 21pt;
 	color: #e7e7c7;
 	border-bottom: 1px solid #c7c7a7;
-	margin-left:10px;
-
+	margin-left:8pt;
 }
 
 body.reader #side-menu .side-menu-title .author {
@@ -175,8 +176,8 @@ body.reader #side-menu .side-menu-title .author {
 
 body.reader #side-menu ul {
 	list-style-type: none;
-	margin-left:15px;
-	padding:0px;
+	margin-left:12pt;
+	padding:0;
 }
 
 body.reader #side-menu a {
@@ -185,7 +186,7 @@ body.reader #side-menu a {
 
 body.reader #side-menu ul li {
 	list-style-type: none;
-	margin:5px 0px;
+	margin:4pt 0;
 	padding:10pt;
 	background-color: #606060;
 	color:white;
@@ -207,16 +208,17 @@ body.reader #side-menu ul li:hover {
 *************************************************/
 
 body.reader #content-container {
+	margin:0;
 	z-index:1;
 	overflow-y:scroll;
 	padding-left:220pt;
 	background-color: transparent;
 	position:absolute;
-	min-width:100%;
+	width:100%;
 	height:100%;
-	transition: padding 1s;
-	-webkit-transition: padding 1s;
-	-moz-transition: padding 1s;
+	transition: padding 0.3s;
+	-webkit-transition: padding 0.3s;
+	-moz-transition: padding 0.3s;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -227,43 +229,43 @@ body.reader.folded #content-container {
 }
 
 body.reader #chapter {
-	padding:20px;
+	padding:16pt;
 }
 
 body.reader .chapter-title {
 	font-family: BroadSheet;
 	font-size: 38pt;
-	padding-bottom: 20px;
+	padding-bottom: 16pt;
 }
 
 body.reader .chapter-author {
 	font-family: NightStillComes;
 	font-size: 16pt;
-	padding-bottom: 50px;
+	padding-bottom: 40pt;
 }
 
 body.reader .chapter-content {
 	font-family: Vegur;
 	font-size: 12pt;
 	line-height: 1.5;
-	padding-bottom: 50px;
+	padding-bottom: 40pt;
 }
 
 body.reader .chapter-content p.short{
-	margin-top: -15px;
+	margin-top: -12pt;
 }
 
 body.reader .meanwhile {
 	font-family: NightStillComes;
 	font-size: 24pt;
-	padding-bottom: 15px;
+	padding-bottom: 12pt;
 }
 
 body.reader .additional-content {
 	font-family: Vegur;
 	font-size: 12pt;
 	line-height: 1.5;
-	padding-bottom: 10px;
+	padding-bottom: 8pt;
 }
 
 body.reader .additional-content ul {
@@ -281,14 +283,14 @@ body.reader .additional-content ul li:before {
 *************************************************/
 
 body.reader #comments {
-	padding:20px;
+	padding:16pt;
 }
 
 body.reader .comment_wrapper {
 	background-color: #e0e0c0;
-	padding:15px;
-	min-height: 80px;
-	margin-bottom:5px;
+	padding:12pt;
+	min-height: 60pt;
+	margin-bottom:4pt;
 }
 
 body.reader .comment_wrapper.silver {
@@ -300,12 +302,12 @@ body.reader .comment_wrapper.gold {
 }
 
 body.reader .comment_wrapper:last-child {
-	margin-bottom:25px;
+	margin-bottom:20pt;
 }
 
 body.reader .comment_wrapper .avatar-holder {
-	margin-right:10px;
-	padding:5px;
+	margin-right:8pt;
+	padding:4pt;
 	float:left;
 }
 
@@ -348,7 +350,7 @@ body.reader .comment_wrapper .username a:hover {
 
 body.reader .comment_wrapper .username {
 	display:inline;
-	padding-right:15px;
+	padding-right:12pt;
 	font-size:14pt;
 	font-weight: bold;
 }
@@ -378,11 +380,11 @@ body.reader #comments .comments_title {
 }
 
 body.reader #comments textarea#new_comment {
-	margin:15px 0;
-	padding:15px;
+	margin:12pt 0;
+	padding:12pt;
 	resize:none;
 	width:100%;
-	height:100px;
+	height:80pt;
 }
 
 /*************************************************
@@ -396,16 +398,24 @@ body.reader .chapter-content p {
 
 body.reader .marker_setter {
 	position:absolute;
+	background-image: url('../img/marker.png');
+	background-size:contain;
+	width:40pt;
+	height:40pt;
 	display:none;
-	top:0px;
-	left:0px;
+	top:0;
+	left:0;
 }
 
 body.reader .comment_paragraph {
 	position:absolute;
 	display:none;
-	top:0px;
-	left:0px;
+	background-image: url('../img/comment.png');
+	background-size:contain;
+	width:40pt;
+	height:40pt;
+	top:0;
+	left:0;
 }
 
 body.reader.show_markers .marker_setter,
@@ -420,7 +430,7 @@ body.reader.show_comment_markers a.comment_paragraph:hover {
 }
 
 body.reader .inreference {
-	padding-bottom:10px;
+	padding-bottom:8pt;
 	font-size: 10pt;
 	font-family: Aver;
 	font-style:italic;
@@ -452,8 +462,8 @@ body.reader .related_link {
 	color:white;
 	font-size:8pt;
 	background-color:#ff3030;
-	padding: 5px 10px 7px;
-	margin-left:10px;
+	padding: 4pt 8pt 6pt;
+	margin-left:8pt;
 	text-decoration:none;
 }
 
@@ -462,15 +472,15 @@ body.reader .related_link {
 *************************************************/
 
 body.reader .export-section  {
-	border: 5px solid #606099;
+	border: 4pt solid #606099;
 	min-width:30%;
-	border-radius: 10px;
+	border-radius: 8pt;
 	float:left;
-	padding: 0 0 10px;
+	padding: 0 0 8pt;
 }
 
 body.reader .export-section div {
-	margin: 0 10px;
+	margin: 0 8pt;
 }
 
 body.reader .export-section .section-title {
@@ -478,8 +488,8 @@ body.reader .export-section .section-title {
 	font-family: Vegur;
 	background-color: #606099;
 	color:white;
-	padding:5px 15px 10px;
-	margin: 0 0 5px;
+	padding:4pt 12pt 8pt;
+	margin: 0 0 4pt;
 }
 
 body.reader .select-all {
@@ -489,7 +499,7 @@ body.reader .select-all {
 	font-weight: bold;
 	background-color: white;
 	text-align: center;
-	padding:3px;
+	padding:3pt;
 	float:right;
 }
 
@@ -509,7 +519,7 @@ body.reader .export-section {
 
 body.reader .export-submit {
 	clear:left;
-	padding-top:30px;
+	padding-top:24pt;
 }
 
 /*************************************************
@@ -521,11 +531,13 @@ body.reader .profile .user-avatar-big {
 }
 
 body.reader .profile .form-field {
-	margin: 0 0 20px;
+	margin: 0 0 16pt;
+	font-size: 20pt;
 }
 
 body.reader .profile .form-field .field-title {
 	font-size:13pt;
+	max-width: calc(100% - 250px);
 	color: #606099;
 }
 
@@ -534,9 +546,10 @@ body.reader .profile .form-field .field-field {
 }
 
 body.reader .profile .form-field .field-field input {
-	height:30px;
-	min-width:400px;
+	height:24pt;
+	min-width:320pt;
 	width: calc(100% - 250px);
+	font-size:20pt;
 }
 
 body.reader .profile .form-field .field-description {
@@ -556,12 +569,12 @@ body.reader .initial .title {
 	font-size: 38pt;
 	color: #333;
 	font-family: Broadsheet;
-	margin-bottom:15px;
+	margin-bottom:12pt;
 }
 
 body.reader .initial .text_block,
 body.reader .initial ul li {
-	padding: 10px 0;
+	padding: 8pt 0;
 	color:#333;
 	font-family: Vegur;
 	font-size: 12pt;
@@ -590,7 +603,7 @@ body.reader .initial .holder {
 
 body.reader .initial .arrow {
 	background-color: #909090;
-	background-image: url('../img/left.png');
+	background-image: url('../img/right.png');
 }
 
 body.reader .initial .comm {

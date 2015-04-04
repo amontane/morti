@@ -1,6 +1,6 @@
 <?php
 	include_once '../common/session_protection.php';
-	$MORTI_body_class = 'reader';
+	$MORTI_body_class = 'reader folded';
 	$MORTI_load_reader_scripts = true;
 	include_once '../dao/mysql.php';
 	include_once '../dao/user.php';
@@ -76,6 +76,7 @@
 		</div>
 		<script>
 			loadPerfectScrollbar();
+			initMobileMenu();
 		</script>
 
 <?php	
