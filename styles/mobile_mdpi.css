@@ -58,6 +58,7 @@ body.login form {
 body.login input.field {
 	width: 100%;
 	height: 30pt;
+	font-size:13pt;
 }
 
 /*************************************************
@@ -366,6 +367,7 @@ body.reader .profile .form-field .field-field input {
 	height:24pt;
 	min-width:320pt;
 	width: calc(100% - 200pt);
+	font-size:13pt;
 }
 
 body.reader .profile .form-field .field-description {

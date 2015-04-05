@@ -30,6 +30,7 @@ CREATE TABLE `chapter` (
   `additional_text_file` varchar(40) DEFAULT NULL,
   `last_modified` datetime DEFAULT NULL,
   `last_comment` datetime DEFAULT NULL,
+  `next_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `visible_title` (`visible_title`),
   UNIQUE KEY `text_file` (`text_file`),
@@ -90,6 +91,7 @@ CREATE TABLE `user` (
   `avatar` varchar(100) DEFAULT NULL,
   `marker_chapter` int(11) DEFAULT NULL,
   `marker_paragraph` int(11) DEFAULT NULL,
+  `show_email` int(1) NOT NULL DEFAULT 0,
   PRIMARY KEY (`email`),
   UNIQUE KEY `username` (`username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;

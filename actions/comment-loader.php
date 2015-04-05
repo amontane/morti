@@ -53,6 +53,7 @@
 		$date = $comment_structure[6];
 		$paragraph = $comment_structure[7];
 		$permissions = $comment_structure[8];
+		$showMail = $comment_structure[9];
 
 		$holderClass = '';
 		if ($permissions == 1) {
@@ -61,10 +62,13 @@
 			$holderClass = ' gold';
 		}
 		echo ('<div class="comment_wrapper' . $holderClass . '"><div class="avatar-holder"><img class="avatar" src="' . $avatar . '" height="66px" width="66px" align="top"/></div>');
-		echo ('<div class="username"><a href="mailto:'.htmlspecialchars($email).'">'. htmlspecialchars($username) .'</a></div>');
+		if ($showMail) {
+			echo ('<div class="username"><a href="mailto:'.htmlspecialchars($email).'">'. htmlspecialchars($username) .'</a></div>');
+		} else {
+			echo ('<div class="username"><a>'. htmlspecialchars($username) .'</a></div>');
+		}
 		echo ('<div class="date">' . htmlspecialchars(pretty_date($date)) . '</div><br/>');
 		if (isset($paragraph)) {
-			// TODO: Set the link to the paragraph. (En referencia a este pàrrafo:)
 			echo ('<div class="inreference">En referencia a <a href="#paragraph_' . $paragraph . '">este p&aacute;rrafo</a>:</div>');
 		}
 		echo ('<div class="comment">' . htmlspecialchars($text) . '</div></div>');

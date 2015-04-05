@@ -5,9 +5,10 @@
 			&iexcl;Hola! &iexcl;Bienvenido a este horrible proyecto de Crowd Editing! Te preguntar&aacute;s: &iquest;qu&eacute; carajo es el Crowd editing?
 			Es muy sencillo, cuando el autor de un libro no tiene dinero para pagarse un editor (o es demasiado
 			taca&ntilde;o para hacerlo) y tiene la poca verg&uuml;enza de recurrir a sus allegados y conocidos para que le
-			echen un cable con las faltas de ortograf&iacute;a y gram&aacute;tica: eso es Crowd Editing. Nah, es co&ntilde;a, no lo busqu&eacute;is
-			en el diccionario, me lo he inventado. Sea como sea, en esta peque&ntilde;a aplicaci&oacute;n web os brindo acceso a un tru&ntilde;o
-			sideral de novela a la que he titulado "Los hijos de Mortimer".
+			echen un cable con las faltas de ortograf&iacute;a y gram&aacute;tica, inicia un proceso de Crowd Editing. Nah, es co&ntilde;a, no lo busqu&eacute;is
+			en el diccionario, me lo he inventado. Todo suena mucho m&aacute;s mol&oacute;n en ingl&eacute;s. Ser "Community Manager" mola, mientras que ser "Un 
+			ga&ntilde;&aacute;n que se pasa todo el d&iacute;a en Twitter" es tristillo (un abrazo para los Community Managers, no offense intended). Sea como sea, 
+			en esta peque&ntilde;a aplicaci&oacute;n web os brindo acceso a un tru&ntilde;o sideral de novela a la que he titulado "Los hijos de Mortimer".
 		</div>
 		<div class="text_block">
 			&iquest;C&oacute;mo funciona esto? Hay un men&uacute; lateral en el que ten&eacute;is todas las opciones.
@@ -54,7 +55,8 @@
 				<strong>Perfil</strong> nos permite configurar las (pocas) opciones de usuario que tenemos
 			</li>
 			<li>
-				<strong>Exportar</strong> permite extraer uno o m&aacute;s cap&iacute;tulos del libro para leerlo offline.
+				<strong>Exportar</strong> permite extraer uno o m&aacute;s cap&iacute;tulos del libro para leerlo offline. De momento, solamente en formato pdf optimizado
+				para ebook. Puede que en un futuro haya m&aacute;s opciones.
 			</li>
 			<li>
 				<strong>Logout</strong> chapa la sesi&oacute;n. Buuum!
@@ -62,5 +64,9 @@
 		</ul>
 		<div class="text_block">
 			Poco m&aacute;s que a&ntilde;adir. &iexcl;Espero que os guste! O que, por lo menos, no os deprima y/o asquee...
+		</div>
+		<div class="tooltip_bubble menu">
+			<div class="arrow-left"></div>
+			Con este bot&oacute;n largo de aqu&iacute; puedes mostrar y ocultar el men&uacute;
 		</div>
 	</div>

@@ -18,6 +18,7 @@
 			$title = $chapter[2];
 			$text = $chapter[3];
 			$additional = $chapter[4];
+			$nextChapter = $chapter[7];
 		}
 
 		if (isset($title)) {
@@ -42,6 +43,10 @@
 			display_additional($additional);
 			echo ('</ul>');
 			echo ('</div>');
+		}
+
+		if (isset($nextChapter)) {
+			echo ('<input type="button" class="button" value="Ir al siguiente capitulo" onclick="openChapter('.$nextChapter.')"/>');
 		}
 	}
 ?>
