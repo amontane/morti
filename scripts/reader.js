@@ -3,11 +3,13 @@ function isMobile() {
 }
 
 function openChapter(id, paragraph) {
+	$("#big-loading-layer").removeClass("hidden");
 	$.get("../actions/chapter-loader.php?identifier=" + id,
 		function(data) {
 			$("#chapter").html(data);
 			loadComments(id);
 			updateMenu(id);
+			$("#big-loading-layer").addClass("hidden");
 			if (paragraph != undefined) {
 				window.location.hash = '#paragraph_' + paragraph;
 			} else {

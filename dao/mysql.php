@@ -64,7 +64,7 @@
 		mysqli_set_charset($link, "UTF8");
 		// TODO: Error check?
 		$insert = "INSERT INTO comment (author, chapter_id, text, date) VALUES ('". mysqli_real_escape_string($link, $author).
-			"', ".mysqli_real_escape_string($link, $chapter).", '".$comment."', NOW())";
+			"', ".mysqli_real_escape_string($link, $chapter).", '".mysqli_real_escape_string($link, $comment)."', NOW())";
 
 		if (mysqli_query($link, $insert) === TRUE) {
 			$update = "UPDATE chapter SET last_comment=NOW() WHERE id=" . mysqli_real_escape_string($link, $chapter);
@@ -79,7 +79,7 @@
 		mysqli_set_charset($link, "UTF8");
 		// TODO: Error check?
 		$insert = "INSERT INTO comment (author, chapter_id, text, date, paragraph) VALUES ('". mysqli_real_escape_string($link, $author).
-			"', ".mysqli_real_escape_string($link, $chapter).", '".$comment."', NOW(), " . $paragraph .")";
+			"', ".mysqli_real_escape_string($link, $chapter).", '".mysqli_real_escape_string($link,$comment)."', NOW(), " . mysqli_real_escape_string($link,$paragraph) .")";
 
 		if (mysqli_query($link, $insert) === TRUE) {
 			$update = "UPDATE chapter SET last_comment=NOW() WHERE id=" . mysqli_real_escape_string($link, $chapter);

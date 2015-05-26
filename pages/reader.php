@@ -74,6 +74,10 @@
 			<div id="comments">
 			</div>
 		</div>
+		<div id="big-loading-layer" class="hidden">
+			<div class="loader">
+			</div>
+		</div>
 		<script>
 			loadPerfectScrollbar();
 			initMobileMenu();
