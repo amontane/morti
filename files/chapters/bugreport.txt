@@ -1,11 +1,10 @@
 En esta sección podéis comentarme todo lo que veáis que le falta a la aplicación, y yo lo iré haciendo cuando tenga tiempo. Recordad que soy un hombre muy ocupado y vago, así que sin presiones plz. De mayor a menor prioridad, la lista de cosas a hacer es esta:
 
-- Maquetación adaptativa para móviles (working on it!)
 - Opción para ocultar email desde el perfil (por si alguien no quiere que se vea)
 - Poner un shortcut en la pantalla inicial para ir al punto de libro
 - Poner un shortcut al final de cada capítulo para ir al siguiente
 - Esconder comentarios viejunos
-- Detectar que hay comentarios nuevos
+- Flag de comentarios nuevos
 - Responder a otros comentarios
 - Más opciones de exportación a pdf: modo din A4, epub
 - Actividad reciente en el profile
@@ -16,4 +15,4 @@ Por el momento, podéis poner los comentarios que queráis que os lo agradeceré
 
 El padre de la criatura.
 
-Last update de este fichero: 1 de abril, pero os prometo que todo lo que pone aqui es cierto
+Last update de este fichero: 26 de mayo

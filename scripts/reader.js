@@ -10,6 +10,9 @@ function openChapter(id, paragraph) {
 			loadComments(id);
 			updateMenu(id);
 			$("#big-loading-layer").addClass("hidden");
+			if (isMobile()) {
+				toggle_side_menu();
+			}
 			if (paragraph != undefined) {
 				window.location.hash = '#paragraph_' + paragraph;
 			} else {
@@ -160,10 +163,4 @@ function loadPerfectScrollbar() {
 	$(document).ready(function(){
 		$("#side-menu").perfectScrollbar();
 	});
-}
-
-function initMobileMenu() {
-	if (isMobile()) {
-		$("#side-menu ul a").click(function(){toggle_side_menu();});
-	}
 }
