@@ -29,14 +29,14 @@
 		echo ('</ul>');
 
 		echo ('<ul>');
-		echo ('<a href="#marker-start"><li>Inicio del capítulo</li></a>');
+		echo ('<a href="#marker-start" onClick="toggleIfMobile()"><li>Inicio del capítulo</li></a>');
 
 		if (isset($additional)) {
-			echo ('<a href="#marker-meanwhile"><li>Mientras tanto...</li></a>');
+			echo ('<a href="#marker-meanwhile" onClick="toggleIfMobile()"><li>Mientras tanto...</li></a>');
 		}
 
-		echo ('<a href="#marker-comments"><li>Comentarios</li></a>');
-		echo ('<a href="#marker-newcomment"><li>Nuevo comentario</li></a>');
+		echo ('<a href="#marker-comments" onClick="toggleIfMobile()"><li>Comentarios</li></a>');
+		echo ('<a href="#marker-newcomment"  onClick="toggleIfMobile()"><li>Nuevo comentario</li></a>');
 		echo ('</ul>');
 		echo ("<script>initMobileMenu()</script>");
 	}

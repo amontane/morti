@@ -2,6 +2,12 @@ function isMobile() {
 	return window.matchMedia('(max-device-width: 420px)').matches;
 }
 
+function toggleIfMobile() {
+	if (isMobile()) {
+		toggle_side_menu();
+	}
+}
+
 function openChapter(id, paragraph) {
 	$("#big-loading-layer").removeClass("hidden");
 	$.get("../actions/chapter-loader.php?identifier=" + id,
@@ -10,9 +16,7 @@ function openChapter(id, paragraph) {
 			loadComments(id);
 			updateMenu(id);
 			$("#big-loading-layer").addClass("hidden");
-			if (isMobile()) {
-				toggle_side_menu();
-			}
+			toggleIfMobile();
 			if (paragraph != undefined) {
 				window.location.hash = '#paragraph_' + paragraph;
 			} else {
@@ -68,6 +72,7 @@ function show_export() {
 			$("#chapter").html(data);
 			$("#comments").html('');
 			updateMenu();
+			toggleIfMobile();
 		}
 	);
 } 
@@ -78,6 +83,7 @@ function show_profile() {
 			$("#chapter").html(data);
 			$("#comments").html('');
 			updateMenu();
+			toggleIfMobile();
 		}
 	);
 }
@@ -128,6 +134,7 @@ function setMarker (chapterId, markerNumber) {
 
 function showMarkers (show) {
 	if (show) {
+		toggleIfMobile();
 		$("body").addClass("show_markers");
 		$("body").removeClass("show_comment_markers");
 		setTimeout(function(){showMarkers(false);},5000);
@@ -151,6 +158,7 @@ function removeRelated () {
 
 function showCommentMarkers (show) {
 	if (show) {
+		toggleIfMobile();
 		$("body").addClass("show_comment_markers");
 		$("body").removeClass("show_markers");
 		setTimeout(function(){showCommentMarkers(false);},5000);
