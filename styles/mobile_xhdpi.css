@@ -154,7 +154,7 @@ body.reader .chapter-content {
 }
 
 body.reader .chapter-content p.short{
-	margin-top: -24pt;
+	margin-top: -44pt;
 }
 
 body.reader .meanwhile {
@@ -262,7 +262,7 @@ body.reader #comments textarea#new_comment {
 *************************************************/
 
 body.reader .chapter-content p {
-	margin:26pt 0;
+	margin:46pt 0;
 }
 
 body.reader .marker_setter {
