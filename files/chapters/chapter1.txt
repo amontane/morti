@@ -3,6 +3,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et elit at nisl m
 
 In posuere libero eu arcu tristique facilisis. Fusce eu libero sed massa semper lobortis in at leo. Nam congue mollis sapien efficitur sollicitudin. Sed imperdiet neque eu facilisis interdum. Nam at pellentesque dui. Nullam ligula lorem, lacinia id posuere vestibulum, fringilla ut libero. Suspendisse nec leo quis dolor sodales facilisis vitae ut mauris. Donec vitae sapien purus. Mauris auctor odio elit, sagittis sagittis lectus consectetur vitae.
 
+[img]name="testimg.png" aspectratio="1920:1080"
+
 Nullam sagittis maximus metus et condimentum. Sed eget neque ex. Phasellus ornare scelerisque consequat. Etiam non tellus pellentesque, iaculis nibh ac, auctor erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam sagittis posuere libero a pretium. Integer faucibus tortor elit, vel mattis libero ultricies nec. Pellentesque gravida finibus magna quis sollicitudin. Donec vulputate sed diam vel rhoncus. Nullam nibh quam, aliquam eu libero nec, dignissim sodales urna. Suspendisse ultrices sapien lobortis mauris varius, sit amet congue tellus convallis.
 
 - Sample dialog?

@@ -1,6 +1,6 @@
 <?php
 	include_once '../common/session_protection.php';
-	include_once '../fpdf/fpdf.php';
+	include_once '../fpdf/html2pdf.php';
 	include_once '../dao/files.php';
 	include_once '../dao/mysql.php';
 
@@ -10,7 +10,7 @@
 
 	function makePDF ($config, $chapters) {
 		$chapArray = explode(',',$chapters);
-		$pdf = new FPDF('P','mm',$config["page_size"]);
+		$pdf = new FPDF_HTML('P','mm',$config["page_size"]);
 		$pdf->AddFont('Almendra','','Almendra-Regular.php');
 		addCover($pdf, $config);
 		foreach ($chapArray as &$chapterId) {
@@ -116,12 +116,12 @@
 			$config["chapter_author_line_height"] = 5;
 			$config["chapter_author_line_break_height"] = 5;
 			$config["before_chapter_spacing"] = 20;
-			$config["chapter_font_face"] = "Arial";
+			$config["chapter_font_face"] = "Times";
 			$config["chapter_font_decoration"] = "";
 			$config["chapter_font_size"] = 14;
 			$config["chapter_line_height"] = 8;
 			$config["chapter_dialog_line_break_height"] = 1;
-			$config["chapter_line_break_height"] = 5;
+			$config["chapter_line_break_height"] = 8;
 			$config["meanwhile_font_face"] = "Arial";
 			$config["meanwhile_font_decoration"] = "I";
 			$config["meanwhile_font_size"] = 20;
@@ -130,8 +130,9 @@
 			$config["additional_font_face"] = "Arial";
 			$config["additional_font_decoration"] = "";
 			$config["additional_font_size"] = 13;
-			$config["additional_line_height"] = 5;
+			$config["additional_line_height"] = 7;
 			$config["additional_line_break_height"] = 1;
+			$config["img_width"] = 127;
 		}
 
 		return $config;
