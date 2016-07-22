@@ -19,9 +19,6 @@
 					echo ('<p><img style="width:100%" src="../img/embed/' . $imgFilename . '"/></p>');
 				} else {
 					$displayData = htmlspecialchars($theData);
-					if (isDialog($theData)) {
-						$displayData = "&mdash;" . substr($displayData, 1);
-					}
 					if (isDialog($theData) && $lastLineWasDialog) {
 						echo('<p class="short">' . $displayData . "</p>\n");
 					} else {
