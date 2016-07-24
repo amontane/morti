@@ -139,12 +139,12 @@ body.reader #chapter {
 }
 
 body.reader .chapter-title {
-	font-size: 38pt;
+	font-size: 58pt;
 	padding-bottom: 16pt;
 }
 
 body.reader .chapter-author {
-	font-size: 16pt;
+	font-size: 20pt;
 	padding-bottom: 40pt;
 }
 

@@ -163,3 +163,20 @@
     src: url(fonts/Vegur-Light.otf);
     font-style:italic;
 }
+
+/* Misc fonts */
+
+@font-face {
+    font-family: AnotherTypewriter;
+    src: url(fonts/atwritertf);
+}
+@font-face {
+    font-family: Iglesia;
+    src: url(fonts/Iglesia.ttf);
+    font-weight:bold;
+}
+@font-face {
+    font-family: Tangerine;
+    src: url(fonts/Tangerine_Regular.ttf);
+    font-style:italic;
+}

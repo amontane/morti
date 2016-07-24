@@ -237,14 +237,14 @@ body.reader #chapter {
 }
 
 body.reader .chapter-title {
-	font-family: BroadSheet;
-	font-size: 38pt;
+	font-family: Iglesia;
+	font-size: 58pt;
 	padding-bottom: 16pt;
 }
 
 body.reader .chapter-author {
-	font-family: NightStillComes;
-	font-size: 16pt;
+	font-family: Tangerine;
+	font-size: 20pt;
 	padding-bottom: 40pt;
 }
 
