@@ -80,7 +80,6 @@
 		</div>
 		<script>
 			loadPerfectScrollbar();
-			initMobileMenu();
 		</script>
 
 <?php	

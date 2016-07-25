@@ -36,11 +36,11 @@
 			if ($success) {
 				echo('<feedbackMessage>'.htmlentities($_kFeedbackMessages["commentOK"]).'</feedbackMessage>');
 			} else {
-				echo('<feedbackError/><feedbackMessage>'.htmlentities($_kFeedbackMessages["commentNOK"]).'</feedbackMessage>');
+				echo('<feedbackError></feedbackError><feedbackMessage>'.htmlentities($_kFeedbackMessages["commentNOK"]).'</feedbackMessage>');
 			}
 		}
 	} else {
-		echo('<feedbackError/><feedbackMessage>'.htmlentities($_kFeedbackMessages["error"]).'</feedbackMessage>');
+		echo('<feedbackError></feedbackError><feedbackMessage>'.htmlentities($_kFeedbackMessages["error"]).'</feedbackMessage>');
 	}
 
 	function paint_comment($comment_structure) {

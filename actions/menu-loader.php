@@ -38,6 +38,5 @@
 		echo ('<a href="#marker-comments" onClick="toggleIfMobile()"><li>Comentarios</li></a>');
 		echo ('<a href="#marker-newcomment"  onClick="toggleIfMobile()"><li>Nuevo comentario</li></a>');
 		echo ('</ul>');
-		echo ("<script>initMobileMenu()</script>");
 	}
 ?>

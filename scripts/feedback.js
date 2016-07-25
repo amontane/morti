@@ -14,47 +14,47 @@ function feedbackFadeTimeoutCancel() {
 
 function feedbackFadeTrigger() {
 	feedbackFadeTimeoutCancel();
-	var division = $("#error-frame");
+	var division = document.getElementById("error-frame");
 	if (division) {
-		division.removeClass("hover");
-		division.removeClass("shown");
+		removeClass(division, "hover");
+		removeClass(division, "shown");
 	}
 }
 
 function feedbackMouseIn() {
 	feedbackFadeTimeoutCancel();
-	var division = $("#error-frame");
+	var division = document.getElementById("error-frame");
 	if (division) {
-		division.addClass("hover");
+		addClass(division, "hover");
 	}
 }
 
 function feedbackMouseOut() {
-	var division = $("#error-frame");
+	var division = document.getElementById("error-frame");
 	if (division) {
-		division.removeClass("hover");
+		removeClass(division, "hover");
 	}
 	feedbackFadeTimeoutStart();
 }
 
 function showFeedback(message) {
-	var division = $("#error-frame");
+	var division = document.getElementById("error-frame");
 	if (message && division) {
-		division.html(message);
-		division.removeClass("error");
-		division.removeClass("hover");
-		division.addClass("shown");
+		division.innerHTML = message;
+		removeClass(division, "error");
+		removeClass(division, "hover");
+		addClass(division, "shown");
 	}
 	feedbackFadeTimeoutStart();
 }
 
 function showErrorFeedback(message) {
-	var division = $("#error-frame");
+	var division = document.getElementById("error-frame");
 	if (message && division) {
-		division.html(message);
-		division.addClass("error");
-		division.removeClass("hover");
-		division.addClass("shown");
+		division.innerHTML = message;
+		addClass(division, "error");
+		removeClass(division, "hover");
+		addClass(division, "shown");
 	}
 	feedbackFadeTimeoutStart();
 }
@@ -62,14 +62,15 @@ function showErrorFeedback(message) {
 function decodeResponseForFeedback(response) {
 	var error = false;
 	var message = "";
-	responseDOM =  $.parseHTML(response);
-	$(responseDOM).each(function(index) {
-		if ($(this).is("feedbackError")) {
+	turboDOM = htmlToElement(response);
+	while (turboDOM) {
+		if (turboDOM.nodeName.toLowerCase() == "feedbackerror") {
 			error = true;
-		} else if ($(this).is("feedbackMessage")) {
-			message = $(this).html();
+		} else if (turboDOM.nodeName.toLowerCase() == "feedbackmessage") {
+			message = turboDOM.innerHTML;
 		}
-	});
+		turboDOM = turboDOM.nextSibling;
+	}
 	if (error) {
 		showErrorFeedback(message);
 	} else {

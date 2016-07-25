@@ -40,10 +40,10 @@
 			} else if ($success) {
 				echo ('<feedbackMessage>' .$_kFeedbackMessages["profileOK"]. '</feedbackMessage>');
 			} else {
-				echo ('<feedbackError/><feedbackMessage>' .$_kFeedbackMessages["profileNOK"]. '</feedbackMessage>'); 
+				echo ('<feedbackError></feedbackError><feedbackMessage>' .$_kFeedbackMessages["profileNOK"]. '</feedbackMessage>'); 
 			} 
 		} else {
-			echo ('<feedbackError/><feedbackMessage>' .$_kFeedbackMessages["profileNOKpass"]. '</feedbackMessage>'); 
+			echo ('<feedbackError></feedbackError><feedbackMessage>' .$_kFeedbackMessages["profileNOKpass"]. '</feedbackMessage>'); 
 		}
 
 	} else if (isset($_POST["marker_chapter"]) && isset($_POST["marker_paragraph"])) {

@@ -7,11 +7,11 @@
 <html>
 	<head>
 		<title><?=$MORTI_title?></title>
-		<script src="../scripts/jquery-2.1.0.min.js"></script>
 		<script src="../scripts/feedback.js"></script>
+		<script src="../scripts/utils.js"></script>
 <?php if (isset($MORTI_load_reader_scripts) && $MORTI_load_reader_scripts) {?>
 		<script src="../scripts/reader.js"></script>
-		<script src="../scripts/perfect_scrollbar/perfect-scrollbar.jquery.min.js"></script>
+		<script src="../scripts/perfect_scrollbar/perfect-scrollbar.min.js"></script>
 <?php } ?>
 		<link rel="stylesheet" type="text/css" href="../styles/fonts.css"/>
 		<link rel="stylesheet" type="text/css" href="../styles/web.css" media="screen" />

@@ -9,13 +9,15 @@ function toggleIfMobile() {
 }
 
 function openChapter(id, paragraph) {
-	$("#big-loading-layer").removeClass("hidden");
-	$.get("../actions/chapter-loader.php?identifier=" + id,
+	loader = document.getElementById("big-loading-layer");
+	removeClass(loader, "hidden");
+	ajaxGet("../actions/chapter-loader.php?identifier=" + id,
 		function(data) {
-			$("#chapter").html(data);
+			chap = document.getElementById("chapter");
+			chapter.innerHTML = data;
 			loadComments(id);
 			updateMenu(id);
-			$("#big-loading-layer").addClass("hidden");
+			addClass(loader, "hidden");
 			toggleIfMobile();
 			if (paragraph != undefined) {
 				window.location.hash = '#paragraph_' + paragraph;
@@ -28,28 +30,32 @@ function openChapter(id, paragraph) {
 
 function updateMenu(id) {
 	if (id) {
-		$.get("../actions/menu-loader.php?identifier=" + id,
+		ajaxGet("../actions/menu-loader.php?identifier=" + id,
 			function(data) {
-				$("#current_chapter_options").html(data);
+				document.getElementById("current_chapter_options").innerHTML = data;
 			}
 		);
 	} else {
-		$("#current_chapter_options").html('');
+		document.getElementById("current_chapter_options").innerHTML = '';
 	}
 }
 
 function loadComments(id) {
-	$.get("../actions/comment-loader.php?chapterId=" + id,
+	ajaxGet("../actions/comment-loader.php?chapterId=" + id,
 		function(data) {
-			$("#comments").html(data);
+			document.getElementById("comments").innerHTML = data;
 		}
 	);	
 }
 
 function submitComment(chapterId) {
- 	var text = $('#new_comment').val();
- 	var paragraph = $('#related_paragraph_field').val();
- 	$.post("../actions/comment-loader.php",
+ 	var text = document.getElementById("new_comment").value;
+ 	var paragraph;
+ 	var paragField = document.getElementById("related_paragraph_field");
+ 	if (paragField) {
+ 		paragraph = paragField.value;
+ 	}
+ 	ajaxPost("../actions/comment-loader.php",
  		{chapter: chapterId, comment: text, paragraph: paragraph},
  		function(data) {
  			decodeResponseForFeedback(data);
@@ -59,18 +65,18 @@ function submitComment(chapterId) {
 }
 
 function toggle_side_menu() {
-	if ($("body").hasClass("folded")) {
-		$("body").removeClass("folded");
+	if (hasClass(document.body, "folded")) {
+		removeClass(document.body, "folded");
 	} else {
-		$("body").addClass("folded");
+		addClass(document.body, "folded");
 	}
 }
 
 function show_export() {
-	$.get("../actions/export.php",
+	ajaxGet("../actions/export.php",
 		function(data) {
-			$("#chapter").html(data);
-			$("#comments").html('');
+			document.getElementById("chapter").innerHTML = data;
+			document.getElementById("comments").innerHTML = '';
 			updateMenu();
 			toggleIfMobile();
 		}
@@ -78,10 +84,10 @@ function show_export() {
 } 
 
 function show_profile() {
-	$.get("../actions/profile.php",
+	ajaxGet("../actions/profile.php",
 		function(data) {
-			$("#chapter").html(data);
-			$("#comments").html('');
+			document.getElementById("chapter").innerHTML = data;
+			document.getElementById("comments").innerHTML = '';
 			updateMenu();
 			toggleIfMobile();
 		}
@@ -89,44 +95,48 @@ function show_profile() {
 }
 
 function submitProfile() {
-	var avatar = $("#avatar").val();
-	var uname = $("#username").val();
-	var new_pass = $("#new_pass").val();
-	var conf_new_pass = $("#confirm_new_pass").val();
-	var old_pass = $("#old_pass").val();
-	$.post("../actions/profile.php",
+	var avatar = document.getElementById("avatar").value;
+	var uname = document.getElementById("username").value;
+	var new_pass = document.getElementById("new_pass").value;
+	var conf_new_pass = document.getElementById("confirm_new_pass").value;
+	var old_pass = document.getElementById("old_pass").value;
+	ajaxPost("../actions/profile.php",
 		{avatar:avatar, uname:uname, new_pass:new_pass, conf_new_pass:conf_new_pass, old_pass:old_pass},
 		function(data) {
 			decodeResponseForFeedback(data);
-			$("#chapter").html(data);
-			$("#comments").html('');
+			document.getElementById("chapter").innerHTML = data;
+			document.getElementById("comments").innerHTML = '';
 		}
 	);
 }
 
 function selectAllChapters() {
-	$(".chapter-check").each(function () { this.checked = true; });
+	var allChaps = document.getElementsByClassName("chapter-check");
+	for (ind = 0; ind < allChaps.length; ind++) {
+		allChaps[ind].checked = true;
+	}
 }
 
 function exportPDF() {
 	var ids = "";
-	$(".chapter-check").each(function () {
-		if (this.checked) {
+	var allChaps = document.getElementsByClassName("chapter-check");
+	for (ind = 0; ind < allChaps.length; ind++) {
+		if (allChaps[ind].checked) {
 			if (ids != "") {
 				ids = ids+ ",";
 			}
-			ids = ids + this.value;
+			ids = ids + allChaps[ind].value;
 		}
-	});
+	}
 	window.location = "../actions/pdf-loader.php?ids=" + ids;
 }
 
 function setMarker (chapterId, markerNumber) {
-		$.post("../actions/profile.php",
+	ajaxPost("../actions/profile.php",
  		{marker_chapter: chapterId, marker_paragraph: markerNumber},
  		function(data) {
  			decodeResponseForFeedback(data);
- 			$("#marker_link_holder").html(data);
+ 			document.getElementById("marker_link_holder").innerHTML = data;
  		}
  	);
 	showMarkers(false);
@@ -135,11 +145,11 @@ function setMarker (chapterId, markerNumber) {
 function showMarkers (show) {
 	if (show) {
 		toggleIfMobile();
-		$("body").addClass("show_markers");
-		$("body").removeClass("show_comment_markers");
+		addClass(document.body, "show_markers");
+		removeClass(document.body, "show_comment_markers");
 		setTimeout(function(){showMarkers(false);},5000);
 	} else {
-		$("body").removeClass("show_markers");
+		removeClass(document.body, "show_markers");
 	}
 }
 
@@ -147,28 +157,28 @@ function commentParagraph (summary, markerNumber) {
 	// TODO: go to comment passing commented paragraph
 	var content = '<div class="related_label">En referencia al p&aacute;rrafo: </div><div class="related_paragraph">&ldquo;' + summary + '&rdquo;</div>';
 	content = content + '<input id="related_paragraph_field" type="hidden" value="' + markerNumber + '"/><a href="#" class="related_link" onClick="removeRelated()">Eliminar referencia</a>';
-	$("#paragraph_container").html(content);
+	document.getElementById("paragraph_container").innerHTML = content;
 	window.location.hash = "#marker-newcomment";
 	showCommentMarkers(false);
 }
 
 function removeRelated () {
-	$("#paragraph_container").html("");
+	document.getElementById("paragraph_container").innerHTML = "";
 }
 
 function showCommentMarkers (show) {
 	if (show) {
 		toggleIfMobile();
-		$("body").addClass("show_comment_markers");
-		$("body").removeClass("show_markers");
+		addClass(document.body, "show_comment_markers");
+		removeClass(document.body, "show_markers");
 		setTimeout(function(){showCommentMarkers(false);},5000);
 	} else {
-		$("body").removeClass("show_comment_markers");
+		removeClass(document.body, "show_comment_markers");
 	}
 }
 
 function loadPerfectScrollbar() {
-	$(document).ready(function(){
-		$("#side-menu").perfectScrollbar();
+	document.addEventListener("DOMContentLoaded", function() {
+		Ps.initialize(document.getElementById('side-menu'));
 	});
 }
