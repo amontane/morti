@@ -21,7 +21,7 @@
 		$link = new mysqli('localhost', $GLOBALS["MORTI_mysql_user"], $GLOBALS["MORTI_mysql_pass"], $GLOBALS["MORTI_mysql_db"]) or die ('Die');
 		mysqli_set_charset($link, "UTF8");
 		// TODO: Error check?
-		$query = "SELECT id,author,visible_title FROM chapter ORDER BY id";
+		$query = "SELECT id,author,visible_title,reviewed FROM chapter ORDER BY id";
 		$result = mysqli_query($link, $query);
 		
 		$table = array();

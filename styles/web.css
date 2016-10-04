@@ -207,6 +207,10 @@ body.reader #side-menu ul li:hover {
 	color:#b0b0ff;
 }
 
+body.reader .uni-tick {
+	color:#50ff80;
+}
+
 /*************************************************
 ****** Reader - Content
 *************************************************/

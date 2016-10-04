@@ -22,7 +22,7 @@
 	for ($i=0; $i<sizeof($list); $i++) {
 ?>
 					<a href='#' onClick='openChapter(<?=$list[$i][0]?>)'>
-						<li><?=htmlspecialchars($list[$i][2])?></li>
+						<li><?=htmlspecialchars($list[$i][2])?> <?php if($list[$i][3]!=0){print('&nbsp;<span class="uni-tick">&#10004</span>');}?></li>
 					</a>
 <?php
 	}
