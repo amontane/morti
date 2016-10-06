@@ -18,7 +18,7 @@
 			$title = $chapter[2];
 			$text = $chapter[3];
 			$additional = $chapter[4];
-			$nextChapter = $chapter[7];
+			$nextChapter = $chapter[8];
 		}
 
 		if (isset($title)) {
