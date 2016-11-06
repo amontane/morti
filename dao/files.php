@@ -4,7 +4,14 @@
 		return (substr($line, 0, 1) == "-");
 	}
 
-	function display_chapter($chapter, $chapterId) {
+	function substitute_hyphens($line) {
+		$result = preg_replace("/(\w)-(\w)/", "$1&#8208;$2", $line);
+		$result = preg_replace("/(\w)-(\w)/", "$1&#8208;$2", $result);
+		$result = preg_replace("/-/","&mdash;",$result);
+		return $result;
+	}
+
+	function display_chapter($chapter, $chapterId, $epub) {
 		$chapterRoute = "../files/chapters/" . $chapter;
 		$fh = fopen($chapterRoute, 'r')  or die ("Die!");
 		$lastLineWasDialog = false;
@@ -16,10 +23,15 @@
 				if (substr($theData, 0, 5) === '[img]') {
 					preg_match_all('/\[img\]name="(?P<name>[^"]*)" aspectratio="(?P<arw>[0-9]+):(?P<arh>[0-9]+)"/', $theData, $matches);
 					$imgFilename = $matches["name"][0];
-					echo ('<p><img style="width:100%" src="../img/embed/' . $imgFilename . '"/></p>');
+					if ($epub) {
+						$imgFilename = "assets/" . $imgFilename;
+					} else {
+						$imgFilename = "../img/embed/" . $imgFilename;
+					}
+					echo ('<p><img alt="" style="width:100%" src="' . $imgFilename . '"/></p>');
 				} else {
-					$displayData = htmlspecialchars($theData);
-					if (isDialog($theData) && $lastLineWasDialog) {
+					$displayData = substitute_hyphens(htmlentities($theData));
+					if ($epub || (isDialog($theData) && $lastLineWasDialog)) {
 						echo('<p class="short">' . $displayData . "</p>\n");
 					} else {
 						echo("<p>");
@@ -60,7 +72,7 @@
 			if (strlen($theData) > 1) {
 				$theData = htmlspecialchars($theData);
 				//TODO: special tag detection as well...
-				echo("<li>" . $theData . "</li>\n");
+				echo("<li>&mdash;" . $theData . "</li>\n");
 			}
 		}
 

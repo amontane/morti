@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<package version="2.0" xmlns="http://www.idpf.org/2007/opf" unique-identifier="PrimaryID">
+
+
+	<metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+		<dc:title>En un lugar de Garbantia...</dc:title>
+<dc:language>es</dc:language>
+<dc:identifier id="PrimaryID" opf:scheme="URI">http://elvater.net/morti</dc:identifier>
+<dc:description>"En un lugar de Garbantia..." es una novela escrita por Bartserk de Pietro, publicada por primera vez en 2016. Bartserk es un autor amateur, ingeniero informático de profesión, que ha decidido lanzarse en una primera aventura literaria, basada en sus experiencias como Dungeon Master en una larga campaña del juego "Dungeons and Dragons". La historia narra las peripecias de un grupo de cinco aventureros novatos, que se ven obligados a colaborar entre sí para lograr sobrevivir en un mundo lleno de peligros. Una novela cargada de humor y de lenguaje inapropiado, pensada para todos los públicos pero, en especial, para aquellos jóvenes que han disfrutado como niños jugando a juegos de rol.</dc:description>
+<dc:creator opf:role="aut">Bartserk de Pietro</dc:creator>
+<dc:publisher>elvater.net</dc:publisher>
+<meta name="cover" content="cover-image" />
+	</metadata>
+	<manifest>
+		<item id="front-cover" href="OEBPS/front-cover.html" media-type="application/xhtml+xml" />
+		<item id="inner-cover" href="OEBPS/inner-cover.html" media-type="application/xhtml+xml" />
+		<item id="special-thanks" href="OEBPS/special-thanks.html" media-type="application/xhtml+xml" />
+		<item id="table-of-contents" href="OEBPS/table-of-contents.html" media-type="application/xhtml+xml" />
+		<item id="dedicatory" href="OEBPS/dedicatoria.html" media-type="application/xhtml+xml" />
+		<item id="stylesheet" href="OEBPS/epub.css"  media-type="text/css" />
+		<item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml" />
+		<item id="media-Iglesia" href="OEBPS/assets/Iglesia.ttf" media-type="application/x-font-ttf" />
+		<item id="media-Tangerine" href="OEBPS/assets/Tangerine_Regular.ttf" media-type="application/x-font-ttf" />
+		<item id="media-Merriweather" href="OEBPS/assets/Merriweather-Regular.ttf" media-type="application/x-font-ttf" />
+		<item id="media-NightStillComes" href="OEBPS/assets/NightStillComes.otf" media-type="application/x-font-opentype" />
+		<item id="media-Vegur" href="OEBPS/assets/Vegur-Regular.otf" media-type="application/x-font-opentype" />
+	

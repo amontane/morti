@@ -28,5 +28,6 @@
 	</div>-->
 
 	<div class="export-submit">
-		<input class="button" type="button" value="Exportar" onClick="exportPDF()"/>
+		<input class="button" type="button" value="PDF" onClick="exportPDF()"/>
+		<input class="button" type="button" value="EPUB" onClick="exportEPUB()"/>
 	</div>

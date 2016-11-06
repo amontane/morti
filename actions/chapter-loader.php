@@ -31,7 +31,7 @@
 
 		if (isset($text)) {
 			echo ('<div class="chapter-content">');
-			display_chapter($text, $ident);
+			display_chapter($text, $ident, false);
 			echo ('</div>');
 		}
 

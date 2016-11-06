@@ -19,6 +19,7 @@ function openChapter(id, paragraph) {
 			updateMenu(id);
 			addClass(loader, "hidden");
 			toggleIfMobile();
+			window.location.hash = '#';
 			if (paragraph != undefined) {
 				window.location.hash = '#paragraph_' + paragraph;
 			} else {
@@ -117,7 +118,7 @@ function selectAllChapters() {
 	}
 }
 
-function exportPDF() {
+function gatherChapterIds() {
 	var ids = "";
 	var allChaps = document.getElementsByClassName("chapter-check");
 	for (ind = 0; ind < allChaps.length; ind++) {
@@ -128,7 +129,15 @@ function exportPDF() {
 			ids = ids + allChaps[ind].value;
 		}
 	}
-	window.location = "../actions/pdf-loader.php?ids=" + ids;
+	return ids;
+}
+
+function exportPDF() {
+	window.location = "../actions/pdf-loader.php?ids=" + gatherChapterIds();
+}
+
+function exportEPUB() {
+	window.location = "../actions/epub-loader.php?ids=" + gatherChapterIds();
 }
 
 function setMarker (chapterId, markerNumber) {

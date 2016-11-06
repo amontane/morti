@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN"
+"http://www.daisy.org/z3986/2005/ncx-2005-1.dtd">
+
+<ncx version="2005-1" xml:lang="en" xmlns="http://www.daisy.org/z3986/2005/ncx/">
+
+	<head>
+		<!-- The following four metadata items are required for all NCX documents,
+		including those conforming to the relaxed constraints of OPS 2.0 -->
+
+		<meta name="dtb:uid" content="http://elvater.net/morti" /> <!-- same as in .opf -->
+		<meta name="dtb:depth" content="2"/> <!-- 1 or higher -->
+		<meta name="dtb:totalPageCount" content="0"/> <!-- must be 0 -->
+		<meta name="dtb:maxPageNumber" content="0"/> <!-- must be 0 -->
+	</head>
+
+	<docTitle>
+		<text>En un lugar de Garbantia...</text>
+	</docTitle>
+
+	<docAuthor>
+		<text>Bartserk de Pietro</text>
+	</docAuthor>
+	
+	<navMap>
+		<navPoint id="front-cover" playOrder="1">
+			<navLabel>
+				<text>Cubierta</text>
+			</navLabel>
+			<content src="OEBPS/front-cover.html" />
+		</navPoint>
+		<navPoint id="inner-cover" playOrder="2">
+			<navLabel>
+				<text>Cubierta interior</text>
+			</navLabel>
+			<content src="OEBPS/inner-cover.html" />
+		</navPoint>
+		<navPoint id="special-thanks" playOrder="3">
+			<navLabel>
+				<text>Agradecimientos</text>
+			</navLabel>
+			<content src="OEBPS/special-thanks.html" />
+		</navPoint>
+		<navPoint id="table-of-contents" playOrder="4">
+			<navLabel>
+				<text>Indice</text>
+			</navLabel>
+			<content src="OEBPS/table-of-contents.html" />
+		</navPoint>
+		<navPoint id="dedicatory" playOrder="5">
+			<navLabel>
+				<text>Dedicatoria</text>
+			</navLabel>
+			<content src="OEBPS/dedicatoria.html" />
+		</navPoint>
+		

@@ -278,12 +278,8 @@ body.reader .additional-content {
 
 body.reader .additional-content ul {
 	list-style-type: none;
-	padding-left: 15pt;
-	text-indent: -8pt;
-}
-
-body.reader .additional-content ul li:before {
-	content: "- ";
+	text-indent: 15pt;
+	padding-left: 0pt;
 }
 
 /*************************************************

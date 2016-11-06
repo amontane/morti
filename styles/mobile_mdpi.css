@@ -168,8 +168,8 @@ body.reader .additional-content {
 }
 
 body.reader .additional-content ul {
-	padding-left: 15pt;
-	text-indent: -8pt;
+	padding-left: 0pt;
+	text-indent: 15pt;
 }
 
 body.reader .additional-content ul li:before {
