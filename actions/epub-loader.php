@@ -41,6 +41,8 @@
 		echo ('<div class="title">' . $chTitle . '</div>');
 		if ($chAuthor) {
 			echo ('<div class="author">Narrado por ' . $chAuthor . '</div>');
+		} else {
+			echo ('<div class="author"></div>');
 		}
 		echo ('<div class="chapter">');
 		display_chapter($chFile, $chapterId, true);

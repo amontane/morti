@@ -72,6 +72,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: "NightStillComes";
 	font-style: normal;
 	font-size: 1.3em;
+	margin-bottom:1.5em;
 	page-break-before: always;
 }
 

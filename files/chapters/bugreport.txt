@@ -1,14 +1,13 @@
 En esta sección podéis comentarme todo lo que veáis que le falta a la aplicación, y yo lo iré haciendo cuando tenga tiempo. Recordad que soy un hombre muy ocupado y vago, así que sin presiones plz. De mayor a menor prioridad, la lista de cosas a hacer es esta:
 
 - Poner un shortcut en la pantalla inicial para ir al punto de libro
-- Poner un shortcut al final de cada capítulo para ir al siguiente
 - Esconder comentarios viejunos
 - Flag de comentarios nuevos
 - Responder a otros comentarios
-- Más opciones de exportación a pdf: modo din A4, epub
+- Más opciones de exportación a pdf: modo din A4
 
 Por el momento, podéis poner los comentarios que queráis que os lo agradeceré eternamente. Oh, btw, si queréis chafardear el códifo fuente está abierto, http://github.com/amontane/morti por si os ayuda a entender un poco mejor la magnitud de la tragedia. Besos,
 
 El padre de la criatura.
 
-Last update de este fichero: 22/07/2016
+Last update de este fichero: 06/11/2016
