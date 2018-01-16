@@ -11,6 +11,11 @@
 		return $result;
 	}
 
+	function substitute_quotes($line) {
+		$result = preg_replace("/\"([^\"]*)\"/", "“$1”", $line);
+		return $result;
+	}
+
 	function display_chapter($chapter, $chapterId, $epub) {
 		$chapterRoute = "../files/chapters/" . $chapter;
 		$fh = fopen($chapterRoute, 'r')  or die ("Die!");
@@ -30,7 +35,8 @@
 					}
 					echo ('<p><img alt="" style="width:100%" src="' . $imgFilename . '"/></p>');
 				} else {
-					$displayData = substitute_hyphens(htmlentities($theData));
+					$displayData = substitute_quotes($theData);
+					$displayData = substitute_hyphens(htmlentities($displayData));
 					if ($epub || (isDialog($theData) && $lastLineWasDialog)) {
 						echo('<p class="short">' . $displayData . "</p>\n");
 					} else {
