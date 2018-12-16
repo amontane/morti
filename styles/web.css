@@ -282,6 +282,12 @@ body.reader .additional-content ul {
 	padding-left: 0pt;
 }
 
+body.reader .quote {
+	margin-left: 22pt;
+	color: #888;
+	font-style: italic;
+}
+
 /*************************************************
 ****** Reader - Comments
 *************************************************/
@@ -398,6 +404,10 @@ body.reader #comments textarea#new_comment {
 body.reader .chapter-content p {
 	position: relative;
 	margin:13pt 0;
+}
+
+body.reader .quote p {
+	margin-top: -12pt;
 }
 
 body.reader .marker_setter {

@@ -34,6 +34,12 @@
 						$imgFilename = "../img/embed/" . $imgFilename;
 					}
 					echo ('<p><img alt="" style="width:100%" src="' . $imgFilename . '"/></p>');
+				} else if (substr($theData, 0, 7) === '[quote]') {
+					echo ('<div class="quote">');
+				} else if (substr($theData, 0, 8) === '[/quote]') {
+					echo ('</div>');
+				} else if (substr($theData, 0, 6) === '[long]') {
+					echo ('<p class="longstop">&nbsp;</p>');
 				} else {
 					$displayData = substitute_quotes($theData);
 					$displayData = substitute_hyphens(htmlentities($displayData));
@@ -89,12 +95,13 @@
 		$chapterRoute = "../files/chapters/" . $chapter;
 		$fh = fopen($chapterRoute, 'r')  or die ("Die!");
 		$lastLineWasDialog = false;
+		$quoteMode = false;
 
 		while (!feof($fh)) {
 			$theData = fgets($fh);
 			// TODO: better handling of the error
 			if (strlen($theData) > 1) {
-				if(!isDialog($theData) && $lastLineWasDialog) {
+				if(!isDialog($theData) && !$quoteMode && $lastLineWasDialog) {
 					$jump = $config["chapter_line_break_height"] - $config["chapter_dialog_line_break_height"];
 					if ($jump > 0) {
 						$pdf->Ln($jump);
@@ -113,9 +120,17 @@
 						}
 						$pdf->WriteHTML('<img src="../img/embed/' . $imgFilename . '" width="' . $config["img_width"] . '" height="' . $imgHeight . '"/><br/>');
 						$pdf->Ln($config["chapter_line_height"] + $config["chapter_dialog_line_break_height"] + $imgHeight);
+					} else if (substr($theData, 0, 7) === '[quote]') {
+						$quoteMode = true;
+						$pdf->SetFont($config["chapter_font_face"],$config["chapter_quote_font_decoration"],$config["chapter_font_size"]);
+					} else if (substr($theData, 0, 8) === '[/quote]') {
+						$quoteMode = false;
+						$pdf->SetFont($config["chapter_font_face"],$config["chapter_font_decoration"],$config["chapter_font_size"]);
+					} else if (substr($theData, 0, 6) === '[long]') {
+						$pdf->Ln($config["chapter_line_height"]);
 					} else {
 						$pdf->Write($config["chapter_line_height"],iconv('UTF-8', 'ISO-8859-1',$theData));
-						if(isDialog($theData)) {
+						if(isDialog($theData) || $quoteMode) {
 							$lastLineWasDialog = true;
 							$pdf->Ln($config["chapter_dialog_line_break_height"]);
 						} else {

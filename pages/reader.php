@@ -1,5 +1,5 @@
 <?php
-	include_once '../common/session_protection.php';
+	include_once '../common/session-protection.php';
 	$MORTI_body_class = 'reader folded';
 	$MORTI_load_reader_scripts = true;
 	include_once '../dao/mysql.php';

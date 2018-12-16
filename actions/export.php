@@ -1,6 +1,6 @@
 <?php
 	include_once '../dao/mysql.php';
-	include_once '../common/session_protection.php';
+	include_once '../common/session-protection.php';
 ?>
 	<div class="page-title">Exportar</div>
 	<div class="export-section">
