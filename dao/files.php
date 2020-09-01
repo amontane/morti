@@ -12,7 +12,12 @@
 	}
 
 	function substitute_quotes($line) {
-		$result = preg_replace("/\"([^\"]*)\"/", "“$1”", $line);
+		$result = preg_replace("/\"([^\"]*)\"/", "«$1»", $line);
+		return $result;
+	}
+
+	function substitute_tags($line) {
+		$result = preg_replace("/\[i\]([^\]]*)\[\/i\]/", "<span class=\"italic\">$1</span>", $line);
 		return $result;
 	}
 
@@ -43,6 +48,7 @@
 				} else {
 					$displayData = substitute_quotes($theData);
 					$displayData = substitute_hyphens(htmlentities($displayData));
+					$displayData = substitute_tags($displayData);
 					if ($epub || (isDialog($theData) && $lastLineWasDialog)) {
 						echo('<p class="short">' . $displayData . "</p>\n");
 					} else {
@@ -129,7 +135,9 @@
 					} else if (substr($theData, 0, 6) === '[long]') {
 						$pdf->Ln($config["chapter_line_height"]);
 					} else {
-						$pdf->Write($config["chapter_line_height"],iconv('UTF-8', 'ISO-8859-1',$theData));
+						$daData = str_replace("[i]", "", $theData);
+						$daData = str_replace("[/i]", "", $daData);
+						$pdf->Write($config["chapter_line_height"],iconv('UTF-8', 'ISO-8859-1',$daData));
 						if(isDialog($theData) || $quoteMode) {
 							$lastLineWasDialog = true;
 							$pdf->Ln($config["chapter_dialog_line_break_height"]);

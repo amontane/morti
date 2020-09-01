@@ -288,6 +288,10 @@ body.reader .quote {
 	font-style: italic;
 }
 
+body.reader .italic {
+	font-style: italic;
+}
+
 /*************************************************
 ****** Reader - Comments
 *************************************************/

@@ -118,6 +118,7 @@
 			$config["before_chapter_spacing"] = 20;
 			$config["chapter_font_face"] = "Times";
 			$config["chapter_font_decoration"] = "";
+			$config["chapter_font_decoration_italic"] = "I";
 			$config["chapter_font_size"] = 14;
 			$config["chapter_line_height"] = 8;
 			$config["chapter_dialog_line_break_height"] = 1;
