@@ -44,7 +44,7 @@
 				} else if (substr($theData, 0, 8) === '[/quote]') {
 					echo ('</div>');
 				} else if (substr($theData, 0, 6) === '[long]') {
-					echo ('<p class="longstop">&nbsp;</p>');
+					echo ('<p class="longstop">* * *</p>');
 				} else {
 					$displayData = substitute_quotes($theData);
 					$displayData = substitute_hyphens(htmlentities($displayData));

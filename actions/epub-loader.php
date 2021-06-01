@@ -11,7 +11,7 @@
 	function createChapters ($chapters, $tempdir, $tocFile, $tocHTMLFile, $opfFile) {
 		$chapArray = explode(',',$chapters);
 		$chapIds = [];
-		$count = 6;
+		$count = 5;
 		foreach ($chapArray as &$chapterId) {
 			$chapterTitle = createChapter($chapterId, $tempdir);
 			$chapterInternalId = getChapterInternalId($chapterTitle);
@@ -21,6 +21,8 @@
 			fwrite($opfFile, '<item id="'.$chapterInternalId.'" href="OEBPS/'. $chapterInternalId .'.html" media-type="application/xhtml+xml" />');
 			$count++;
 		}
+		fwrite($tocFile, '<navPoint id="special-thanks" playOrder="'.$count.'"><navLabel><text>Agradecimientos</text></navLabel><content src="OEBPS/special-thanks.html"/></navPoint>');
+		fwrite($tocHTMLFile, '<li class="chapter-entry"><a href="special-thanks.html"><span class="toc-chapter-title">Agradecimientos</span></a></li>');
 		return $chapIds;
 	}
 
@@ -110,12 +112,12 @@
 		fwrite ($opfFile, "\t<spine toc=\"ncx\">\n");
 		fwrite ($opfFile, "\t\t<itemref idref=\"front-cover\" linear=\"no\" />\n");
 		fwrite ($opfFile, "\t\t<itemref idref=\"inner-cover\" linear=\"yes\" />\n");
-		fwrite ($opfFile, "\t\t<itemref idref=\"special-thanks\" linear=\"yes\" />\n");
 		fwrite ($opfFile, "\t\t<itemref idref=\"table-of-contents\" linear=\"yes\" />\n");
 		fwrite ($opfFile, "\t\t<itemref idref=\"dedicatory\" linear=\"yes\" />\n");
 		foreach ($chapterIds as $chapterId) {
 			fwrite ($opfFile, "\t\t<itemref idref=\"" . $chapterId ."\" linear=\"yes\" />\n");
 		}
+		fwrite ($opfFile, "\t\t<itemref idref=\"special-thanks\" linear=\"yes\" />\n");
 		fwrite ($opfFile, "\t</spine>\n");
 		fwrite ($opfFile, "\t<guide>\n");
 		fwrite ($opfFile, "\t\t<reference type=\"toc\" title=\"Table of Contents\" href=\"OEBPS/table-of-contents.html\" />\n");

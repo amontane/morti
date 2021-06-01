@@ -132,6 +132,15 @@ body.reader .additional-content ul {
 body.reader .additional-content ul li:before {
 }
 
+body.reader .longstop {
+}
+
+body.reader .quote {
+}
+
+body.reader .quote .longstop {
+}
+
 /*************************************************
 ****** Reader - Comments
 *************************************************/

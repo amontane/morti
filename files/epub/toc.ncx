@@ -35,19 +35,13 @@
 			</navLabel>
 			<content src="OEBPS/inner-cover.html" />
 		</navPoint>
-		<navPoint id="special-thanks" playOrder="3">
-			<navLabel>
-				<text>Agradecimientos</text>
-			</navLabel>
-			<content src="OEBPS/special-thanks.html" />
-		</navPoint>
-		<navPoint id="table-of-contents" playOrder="4">
+		<navPoint id="table-of-contents" playOrder="3">
 			<navLabel>
 				<text>Indice</text>
 			</navLabel>
 			<content src="OEBPS/table-of-contents.html" />
 		</navPoint>
-		<navPoint id="dedicatory" playOrder="5">
+		<navPoint id="dedicatory" playOrder="4">
 			<navLabel>
 				<text>Dedicatoria</text>
 			</navLabel>

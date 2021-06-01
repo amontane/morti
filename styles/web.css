@@ -282,10 +282,20 @@ body.reader .additional-content ul {
 	padding-left: 0pt;
 }
 
+body.reader .longstop {
+	font-weight: bold;
+	font-size: 16pt;
+	text-align: center;
+}
+
 body.reader .quote {
 	margin-left: 22pt;
 	color: #888;
 	font-style: italic;
+}
+
+body.reader .quote .longstop {
+	visibility: hidden;
 }
 
 body.reader .italic {
