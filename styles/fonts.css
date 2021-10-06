@@ -167,6 +167,11 @@
 /* Misc fonts */
 
 @font-face {
+    font-family: "BlackChancery";
+    src: url(fonts/BlackChancery.ttf);
+}
+
+@font-face {
     font-family: AnotherTypewriter;
     src: url(fonts/atwritertf);
 }

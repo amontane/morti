@@ -90,6 +90,7 @@
 		copy("../styles/fonts/Merriweather-Regular.ttf", $tempdir . "/OEBPS/assets/Merriweather-Regular.ttf");
 		copy("../styles/fonts/NightStillComes_mine_final_sample.otf", $tempdir . "/OEBPS/assets/NightStillComes.otf");
 		copy("../styles/fonts/Vegur-Regular.otf", $tempdir . "/OEBPS/assets/Vegur-Regular.otf");
+		copy("../styles/fonts/BlackChancery.ttf", $tempdir . "/OEBPS/assets/BlackChancery.ttf");
 		copy("../styles/epub.css", $tempdir . "/OEBPS/epub.css");
 	}
 

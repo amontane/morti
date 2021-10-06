@@ -257,6 +257,7 @@ body.reader .chapter-content {
 	font-size: 12pt;
 	line-height: 1.5;
 	padding-bottom: 40pt;
+	text-align: justify;
 }
 
 body.reader .chapter-content p.short{
@@ -282,7 +283,7 @@ body.reader .additional-content ul {
 	padding-left: 0pt;
 }
 
-body.reader .longstop {
+body.reader .chapter-content p.longstop {
 	font-weight: bold;
 	font-size: 16pt;
 	text-align: center;
