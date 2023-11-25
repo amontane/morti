@@ -15,7 +15,7 @@
 	</head>
 
 	<docTitle>
-		<text>En un lugar de Garbantia...</text>
+		<text>Los hijos de Mortimer</text>
 	</docTitle>
 
 	<docAuthor>
@@ -43,7 +43,7 @@
 		</navPoint>
 		<navPoint id="dedicatory" playOrder="4">
 			<navLabel>
-				<text>Dedicatoria</text>
+				<text>En episodios anteriores...</text>
 			</navLabel>
 			<content src="OEBPS/dedicatoria.html" />
 		</navPoint>

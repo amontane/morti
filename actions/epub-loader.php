@@ -42,7 +42,11 @@
 		echo ('</head><body>');
 		echo ('<div class="title">' . $chTitle . '</div>');
 		if ($chAuthor) {
-			echo ('<div class="author">Narrado por ' . $chAuthor . '</div>');
+			if ($chAuthor == '¿?') {
+				echo ('<div class="author">Narrado por... ¿ ?</div>');
+			} else {
+				echo ('<div class="author">Narrado por ' . $chAuthor . '</div>');
+			}
 		} else {
 			echo ('<div class="author"></div>');
 		}
