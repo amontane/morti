@@ -275,12 +275,12 @@ body.reader .additional-content {
 	font-size: 12pt;
 	line-height: 1.5;
 	padding-bottom: 8pt;
-}
-
-body.reader .additional-content ul {
-	list-style-type: none;
 	text-indent: 15pt;
 	padding-left: 0pt;
+}
+
+body.reader .additional-content p {
+	margin: 0pt;
 }
 
 body.reader .chapter-content p.longstop {

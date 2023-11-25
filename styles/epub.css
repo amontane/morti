@@ -110,14 +110,9 @@ h1, h2, h3, h4, h5, h6 {
 	font-family:"Vegur";
 	font-style: normal;
 	font-size: 1em;
-}
-
-.meanwhile ul {
-	margin:0;
-	padding:0;
-}
-
-.meanwhile li {
-	list-style-type: none;
 	text-indent: 2em;
+}
+
+.meanwhile p {
+	margin: 0;
 }

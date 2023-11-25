@@ -55,9 +55,9 @@
 		echo ('</div>');
 		if ($mwFile) {
 			echo ('<div class="mw-header">Mientras tanto, en la partida...</div>');
-			echo ('<div class="meanwhile"><ul>');
+			echo ('<div class="meanwhile">');
 			display_additional($mwFile);
-			echo ('</ul></div>');
+			echo ('</div>');
 		}
 		echo ('</body></html>');
 		ob_end_flush();

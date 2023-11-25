@@ -165,14 +165,12 @@ body.reader .meanwhile {
 body.reader .additional-content {
 	font-size: 24pt;
 	padding-bottom: 16pt;
-}
-
-body.reader .additional-content ul {
 	padding-left: 0pt;
 	text-indent: 30pt;
 }
 
-body.reader .additional-content ul li:before {
+body.reader .additional-content p {
+	margin: 0pt;
 }
 
 body.reader .chapter-content p.longstop {

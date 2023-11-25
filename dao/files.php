@@ -90,7 +90,7 @@
 			if (strlen($theData) > 1) {
 				$theData = htmlspecialchars($theData);
 				//TODO: special tag detection as well...
-				echo("<li>&mdash;" . $theData . "</li>\n");
+				echo("<p>&mdash;" . $theData . "</p>\n");
 			}
 		}
 
