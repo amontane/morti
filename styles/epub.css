@@ -116,3 +116,8 @@ h1, h2, h3, h4, h5, h6 {
 .meanwhile p {
 	margin: 0;
 }
+
+.meanwhile p .gray {
+	color: #808080;
+	font-size: 0.85em;
+}

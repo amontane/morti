@@ -173,6 +173,10 @@ body.reader .additional-content p {
 	margin: 0pt;
 }
 
+body.reader .additional-content p .gray {
+	font-size: 10pt;
+}
+
 body.reader .chapter-content p.longstop {
 	font-size: 16pt;
 }

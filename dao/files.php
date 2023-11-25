@@ -89,6 +89,11 @@
 			// TODO: better handling of the error
 			if (strlen($theData) > 1) {
 				$theData = htmlspecialchars($theData);
+
+				$pattern = "/\*(.*?)\*/";
+				$replace = '<span class="gray">*$1*</span>';
+				$theData = preg_replace($pattern, $replace, $theData);
+
 				//TODO: special tag detection as well...
 				echo("<p>&mdash;" . $theData . "</p>\n");
 			}

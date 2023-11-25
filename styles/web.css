@@ -283,6 +283,11 @@ body.reader .additional-content p {
 	margin: 0pt;
 }
 
+body.reader .additional-content p .gray {
+	color: #808080;
+	font-size: 10pt;
+}
+
 body.reader .chapter-content p.longstop {
 	font-weight: bold;
 	font-size: 16pt;
