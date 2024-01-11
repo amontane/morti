@@ -26,6 +26,7 @@
 		$fh = fopen($chapterRoute, 'r')  or die ("Die!");
 		$lastLineWasDialog = false;
 		$markerNum = 1;
+		$stopSeparator = "* * *";
 		while (!feof($fh)) {
 			$theData = fgets($fh);
 			// TODO: better handling of the error
@@ -41,10 +42,12 @@
 					echo ('<p><img alt="" style="width:100%" src="' . $imgFilename . '"/></p>');
 				} else if (substr($theData, 0, 7) === '[quote]') {
 					echo ('<div class="quote">');
+					$stopSeparator = "&nbsp;";
 				} else if (substr($theData, 0, 8) === '[/quote]') {
 					echo ('</div>');
+					$stopSeparator = "* * *";
 				} else if (substr($theData, 0, 6) === '[long]') {
-					echo ('<p class="longstop">* * *</p>');
+					echo ('<p class="longstop">' . $stopSeparator . '</p>');
 				} else {
 					$displayData = substitute_quotes($theData);
 					$displayData = substitute_hyphens(htmlentities($displayData));

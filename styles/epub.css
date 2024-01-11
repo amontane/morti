@@ -82,6 +82,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .chapter .quote {
 	font-style: italic;
+	color: #606060;
 	margin-top: 1em;
 	margin-bottom: 1em;
 	margin-left: 2em;
