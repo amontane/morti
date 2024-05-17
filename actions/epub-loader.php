@@ -32,6 +32,7 @@
 		$mwFile = $chapter[4];
 		$chTitle = $chapter[2];
 		$chAuthor = $chapter[1];
+		$isIngame = $chapter[9];
 
 		$chapInternalId =  getChapterInternalId($chTitle);
 		$filename = $tempdir . '/OEBPS/' . $chapInternalId . ".html";
@@ -54,7 +55,7 @@
 		display_chapter($chFile, $chapterId, true);
 		echo ('</div>');
 		if ($mwFile) {
-			echo ('<div class="mw-header">Mientras tanto, en la partida...</div>');
+			echo ('<div class="mw-header">' . additional_title($isIngame) . '</div>');
 			echo ('<div class="meanwhile">');
 			display_additional($mwFile);
 			echo ('</div>');

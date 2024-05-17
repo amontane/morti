@@ -19,6 +19,8 @@
 			$text = $chapter[3];
 			$additional = $chapter[4];
 			$nextChapter = $chapter[8];
+			$ingame = $chapter[9];
+			$additional_format = $chapter[10];
 		}
 
 		if (isset($title)) {
@@ -41,7 +43,7 @@
 
 		if (isset($additional)) {
 			echo ('<a name="marker-meanwhile"/>');
-			echo ('<div class="meanwhile">Mientras tanto, en la partida de rol...</div>');
+			echo ('<div class="meanwhile">' . additional_title($ingame) . '</div>');
 			echo ('<div class="additional-content">');
 			display_additional($additional);
 			echo ('</div>');

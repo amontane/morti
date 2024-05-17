@@ -83,6 +83,13 @@
 		return implode(" ", $contentArray) . "...";
 	}
 
+	function additional_title($ingame) {
+		if ($ingame == 0) {
+			return "Mientras tanto...";
+		}
+		return "Mientras tanto, en la partida...";
+	}
+
 	function display_additional($additional) {
 		$additionalRoute = "../files/additional/" . $additional;
 		$fh = fopen($additionalRoute, 'r')  or die ("Die!");

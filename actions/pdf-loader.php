@@ -46,6 +46,7 @@
 			$additional = $chapterInfo[4];
 			$title = $chapterInfo[2];
 			$author = $chapterInfo[1];
+			$ingame = $chapterInfo[9];
 		} else {
 			return;
 		}
@@ -72,7 +73,7 @@
 		if (isset($additional)) {
 			$pdf->AddPage();
 			$pdf->SetFont($config["meanwhile_font_face"],$config["meanwhile_font_decoration"],$config["meanwhile_font_size"]);
-			$pdf->Write($config["meanwhile_line_height"],iconv('UTF-8', 'ISO-8859-1','Mientras tanto, en la partida...'));
+			$pdf->Write($config["meanwhile_line_height"],iconv('UTF-8', 'ISO-8859-1', additional_title($ingame)));
 			$pdf->Ln($config["meanwhile_line_break_height"]);
 
 			$pdf->SetFont($config["additional_font_face"],$config["additional_font_decoration"],$config["additional_font_size"]);

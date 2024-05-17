@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.38, for debian-linux-gnu (i686)
+-- MySQL dump 10.13  Distrib 5.7.34, for osx10.15 (x86_64)
 --
--- Host: localhost    Database: s18d0439_morti
+-- Host: localhost    Database: mortiold
 -- ------------------------------------------------------
--- Server version	5.5.38-0ubuntu0.14.04.1
+-- Server version	5.7.34
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -32,6 +32,8 @@ CREATE TABLE `chapter` (
   `last_comment` datetime DEFAULT NULL,
   `reviewed` tinyint(1) NOT NULL,
   `next_id` int(11) DEFAULT NULL,
+  `ingame` tinyint(1) NOT NULL,
+  `additional_format` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `visible_title` (`visible_title`),
   UNIQUE KEY `text_file` (`text_file`),
@@ -45,7 +47,7 @@ CREATE TABLE `chapter` (
 
 LOCK TABLES `chapter` WRITE;
 /*!40000 ALTER TABLE `chapter` DISABLE KEYS */;
-INSERT INTO `chapter` VALUES (1,'Pepe','Test 1','chapter1.txt','chapter1.txt',NULL,'2016-07-25 00:36:45',0,2),(2,'Pepe','Test 2','chapter2.txt',NULL,NULL,'2016-07-24 22:48:37',0,NULL);
+INSERT INTO `chapter` VALUES (1,'Pepe','Test 1','chapter1.txt','chapter1.txt',NULL,'2016-07-25 00:36:45',0,2,1,0),(2,'Pepe','Test 2','chapter2.txt',NULL,NULL,'2016-07-24 22:48:37',0,NULL,1,0),(3,NULL,'Test 3','chapter3.txt','chapter3.txt',NULL,NULL,0,NULL,0,1),(4,NULL,'Test 4','chapter4.txt','chapter4.txt',NULL,NULL,0,NULL,1,2);
 /*!40000 ALTER TABLE `chapter` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -117,4 +119,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-10-04 13:24:17
+-- Dump completed on 2024-05-17 16:24:35
