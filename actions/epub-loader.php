@@ -33,6 +33,7 @@
 		$chTitle = $chapter[2];
 		$chAuthor = $chapter[1];
 		$isIngame = $chapter[9];
+		$mwFormat = $chapter[10];
 
 		$chapInternalId =  getChapterInternalId($chTitle);
 		$filename = $tempdir . '/OEBPS/' . $chapInternalId . ".html";
@@ -56,8 +57,8 @@
 		echo ('</div>');
 		if ($mwFile) {
 			echo ('<div class="mw-header">' . additional_title($isIngame) . '</div>');
-			echo ('<div class="meanwhile">');
-			display_additional($mwFile);
+			echo ('<div class="' . additional_class($mwFormat) . '">');
+			display_additional($mwFile, $mwFormat);
 			echo ('</div>');
 		}
 		echo ('</body></html>');

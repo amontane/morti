@@ -43,9 +43,9 @@
 
 		if (isset($additional)) {
 			echo ('<a name="marker-meanwhile"/>');
-			echo ('<div class="meanwhile">' . additional_title($ingame) . '</div>');
-			echo ('<div class="additional-content">');
-			display_additional($additional);
+			echo ('<div class="mw-header">' . additional_title($ingame) . '</div>');
+			echo ('<div class="' . additional_class($additional_format) . '">');
+			display_additional($additional, $additional_format);
 			echo ('</div>');
 		}
 

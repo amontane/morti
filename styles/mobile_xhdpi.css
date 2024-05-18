@@ -157,23 +157,23 @@ body.reader .chapter-content p.short{
 	margin-top: -44pt;
 }
 
-body.reader .meanwhile {
+body.reader .mw-header {
 	font-size: 48pt;
 	padding-bottom: 24pt;
 }
 
-body.reader .additional-content {
+body.reader .meanwhile {
 	font-size: 24pt;
 	padding-bottom: 16pt;
 	padding-left: 0pt;
 	text-indent: 30pt;
 }
 
-body.reader .additional-content p {
+body.reader .meanwhile p {
 	margin: 0pt;
 }
 
-body.reader .additional-content p .gray {
+body.reader .meanwhile p .gray {
 	font-size: 20pt;
 }
 

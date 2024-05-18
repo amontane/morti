@@ -47,6 +47,7 @@
 			$title = $chapterInfo[2];
 			$author = $chapterInfo[1];
 			$ingame = $chapterInfo[9];
+			$additional_format = $chapterInfo[10];
 		} else {
 			return;
 		}
@@ -67,7 +68,7 @@
 
 		if (isset($chapter)) {
 			$pdf->SetFont($config["chapter_font_face"],$config["chapter_font_decoration"],$config["chapter_font_size"]);
-			export_chapter($chapter,$pdf, $config);
+			export_chapter($chapter, $pdf, $config);
 		}
 
 		if (isset($additional)) {
@@ -76,8 +77,9 @@
 			$pdf->Write($config["meanwhile_line_height"],iconv('UTF-8', 'ISO-8859-1', additional_title($ingame)));
 			$pdf->Ln($config["meanwhile_line_break_height"]);
 
-			$pdf->SetFont($config["additional_font_face"],$config["additional_font_decoration"],$config["additional_font_size"]);
-			export_additional($additional,$pdf, $config);
+			$fontFace = ($additional_format == 2) ? "Courier" : $config["additional_font_face"];
+			$pdf->SetFont($fontFace,$config["additional_font_decoration"],$config["additional_font_size"]);
+			export_additional($additional, $additional_format, $pdf, $config);
 		}
 	}
 

@@ -264,13 +264,13 @@ body.reader .chapter-content p.short{
 	margin-top: -12pt;
 }
 
-body.reader .meanwhile {
+body.reader .mw-header {
 	font-family: NightStillComes;
 	font-size: 24pt;
 	padding-bottom: 12pt;
 }
 
-body.reader .additional-content {
+body.reader .meanwhile {
 	font-family: Vegur;
 	font-size: 12pt;
 	line-height: 1.5;
@@ -279,13 +279,29 @@ body.reader .additional-content {
 	padding-left: 0pt;
 }
 
-body.reader .additional-content p {
+body.reader .meanwhile p {
 	margin: 0pt;
 }
 
-body.reader .additional-content p .gray {
+body.reader .meanwhile p .gray {
 	color: #808080;
 	font-size: 10pt;
+}
+
+body.reader .meanwhile.email {
+	text-indent: 0;
+}
+
+body.reader .meanwhile.email .header {
+	font-family: Courier;
+}
+
+body.reader .meanwhile.chat {
+	font-family: Courier;
+}
+
+body.reader .meanwhile.chat .light {
+	color: #999;
 }
 
 body.reader .chapter-content p.longstop {

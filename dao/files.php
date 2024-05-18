@@ -90,26 +90,71 @@
 		return "Mientras tanto, en la partida...";
 	}
 
-	function display_additional($additional) {
+	function additional_class($format) {
+		if ($format == 1) {
+			return "meanwhile email";
+		}
+		if ($format == 2) {
+			return "meanwhile chat";
+		}
+		return "meanwhile";
+	}
+
+	function display_additional($additional, $format) {
 		$additionalRoute = "../files/additional/" . $additional;
 		$fh = fopen($additionalRoute, 'r')  or die ("Die!");
 
 		while (!feof($fh)) {
-			$theData = fgets($fh);
 			// TODO: better handling of the error
-			if (strlen($theData) > 1) {
-				$theData = htmlspecialchars($theData);
-
-				$pattern = "/\*(.*?)\*/";
-				$replace = '<span class="gray">*$1*</span>';
-				$theData = preg_replace($pattern, $replace, $theData);
-
-				//TODO: special tag detection as well...
-				echo("<p>&mdash;" . $theData . "</p>\n");
+			$theData = htmlspecialchars(fgets($fh));
+			
+			if ($format == 0 && strlen($theData) > 1) {
+				display_additional_standard($theData);
+			} else if ($format == 1) {
+				display_additional_email($theData);
+			} else if ($format == 2 && strlen($theData) > 1) {
+				display_additional_chat($theData);
 			}
 		}
 
 		fclose($fh);
+	}
+
+	function display_additional_standard($line) {
+		$pattern = "/\*(.*?)\*/";
+		$replace = '<span class="gray">*$1*</span>';
+		$line = preg_replace($pattern, $replace, $line);
+
+		// TODO: special tag detection as well...
+		echo("<p>&mdash;" . $line . "</p>\n");
+	}
+
+	function display_additional_email($line) {
+		if (strlen($line) <= 1) {
+			echo("<p>&nbsp;</p>");
+		} else {
+			$pattern = "/^([A-Za-z]*:)(.*)$/";
+			$replace = '<b>$1</b>$2';
+			$newLine = preg_replace($pattern, $replace, $line);
+
+			if ($line == $newLine) {
+				echo('<p>' . $newLine . "</p>\n");
+			} else {
+				echo('<p class="header">' . $newLine . "</p>\n");
+			}
+		}
+	}
+
+	function display_additional_chat($line) {
+		if ($line[0] == '*') {
+			echo('<p><span class="light">' . $line . '</span></p>');
+		} else {
+			$pattern = "/&lt;(@?)(.*?)&gt;/";
+			$replace = '<b><span class="light">&lt;$1</span>$2<span class="light">&gt;</span></b>';
+			$line = preg_replace($pattern, $replace, $line);
+
+			echo("<p>" . $line . "</p>\n");
+		}
 	}
 
 	function export_chapter($chapter, $pdf, $config) {
@@ -168,16 +213,22 @@
 		fclose($fh);
 	}
 
-	function export_additional($additional, $pdf, $config) {
+	function export_additional($additional, $format, $pdf, $config) {
 		$additionalRoute = "../files/additional/" . $additional;
 		$fh = fopen($additionalRoute, 'r')  or die ("Die!");
 
 		while (!feof($fh)) {
 			$theData = fgets($fh);
 			// TODO: better handling of the error
-			if (strlen($theData) > 1) {
+			if ($format == 0 && strlen($theData) > 1) {
 				//TODO: special tag detection as well...
-				$pdf->Write($config["additional_line_height"],iconv('UTF-8', 'ISO-8859-1','- ' . $theData));
+				$pdf->Write($config["additional_line_height"],iconv('UTF-8', 'ISO-8859-1','-' . $theData));
+				$pdf->Ln($config["additional_line_break_height"]);
+			} else if ($format == 1) {
+				$pdf->Write($config["additional_line_height"],iconv('UTF-8', 'ISO-8859-1',$theData));
+				$pdf->Ln($config["additional_line_break_height"]);
+			} else if ($format == 2 && strlen($theData) > 1) {
+				$pdf->Write($config["additional_line_height"],iconv('UTF-8', 'ISO-8859-1',$theData));
 				$pdf->Ln($config["additional_line_break_height"]);
 			}
 		}
