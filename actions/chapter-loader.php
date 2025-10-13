@@ -27,8 +27,9 @@
 			echo ('<div class="chapter-title">' . htmlspecialchars($title) . '</div>');
 		}
 
-		if (isset($author) && $author == '¿?') {
-			echo ('<div class="chapter-author">Narrado por... ¿ ?</div>');
+		if (isset($author) && str_starts_with($author, '¿')) {
+			$replacedAuthor = ($author == '¿?') ? '¿ ?' : $author;
+			echo ('<div class="chapter-author">Narrado por... ' . $replacedAuthor . '</div>');
 		}
 
 		else if (isset($author)) {

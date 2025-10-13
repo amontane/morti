@@ -40,6 +40,12 @@
   src: url(assets/BlackChancery.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: BPMono;
+  font-weight: normal;
+  font-style: normal;
+  src: url(assets/BPmono.ttf) format("truetype");
+}
 
 /* HEADERS */
 
@@ -125,14 +131,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .meanwhile.email {
 	text-indent: 0;
-}
-
-.meanwhile.email .header {
 	font-family: Courier;
 }
 
 .meanwhile.chat {
-	font-family: Courier;
+	font-family: BPMono;
 }
 
 .meanwhile.chat .light {

@@ -97,6 +97,7 @@
 		copy("../styles/fonts/NightStillComes_mine_final_sample.otf", $tempdir . "/OEBPS/assets/NightStillComes.otf");
 		copy("../styles/fonts/Vegur-Regular.otf", $tempdir . "/OEBPS/assets/Vegur-Regular.otf");
 		copy("../styles/fonts/BlackChancery.ttf", $tempdir . "/OEBPS/assets/BlackChancery.ttf");
+		copy("../styles/fonts/BPmono.ttf", $tempdir . "/OEBPS/assets/BPmono.ttf");
 		copy("../styles/epub.css", $tempdir . "/OEBPS/epub.css");
 	}
 

@@ -153,6 +153,10 @@
 			$replace = '<b><span class="light">&lt;$1</span>$2<span class="light">&gt;</span></b>';
 			$line = preg_replace($pattern, $replace, $line);
 
+			$pattern = "/(&gt;.*)@([^ ?!,]*)/";
+			$replace = "$1<b>@$2</b>";
+			$line = preg_replace($pattern, $replace, $line);
+
 			echo("<p>" . $line . "</p>\n");
 		}
 	}

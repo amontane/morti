@@ -290,14 +290,11 @@ body.reader .meanwhile p .gray {
 
 body.reader .meanwhile.email {
 	text-indent: 0;
-}
-
-body.reader .meanwhile.email .header {
 	font-family: Courier;
 }
 
 body.reader .meanwhile.chat {
-	font-family: Courier;
+	font-family: BPMono;
 }
 
 body.reader .meanwhile.chat .light {
