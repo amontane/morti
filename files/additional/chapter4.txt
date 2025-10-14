@@ -1,5 +1,6 @@
 <Persona1> Esto es el IRC!
 <Persona2> Yujuuu
+<@Jefe> Hola, @Persona1 y @Persona2
 <@Jefe> Soy el jefe
 <Persona1> lo que eres es gilipollas
 <Persona2> lol

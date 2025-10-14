@@ -41,10 +41,17 @@
 }
 
 @font-face {
-  font-family: BPMono;
-  font-weight: normal;
-  font-style: normal;
-  src: url(assets/BPmono.ttf) format("truetype");
+    font-family: "JetBrainsMono";
+    font-weight: normal;
+    font-style: normal;
+    src: url(assets/JetBrainsMono-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "JetBrainsMono";
+    font-weight: bold;
+    font-style: normal;
+    src: url(assets/JetBrainsMono-ExtraBold.ttf) format("truetype");
 }
 
 /* HEADERS */
@@ -135,7 +142,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .meanwhile.chat {
-	font-family: BPMono;
+	font-family: JetBrainsMono;
 }
 
 .meanwhile.chat .light {

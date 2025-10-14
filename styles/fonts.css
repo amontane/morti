@@ -176,6 +176,22 @@
     font-weight:bold;
 }
 
+/* Font: JetBrainsMono. Regular and Bold */
+
+@font-face {
+    font-family: "JetBrainsMono";
+    font-weight: normal;
+    font-style: normal;
+    src: url(fonts/JetBrainsMono-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "JetBrainsMono";
+    font-weight: bold;
+    font-style: normal;
+    src: url(fonts/JetBrainsMono-ExtraBold.ttf) format("truetype");
+}
+
 /* Misc fonts */
 
 @font-face {

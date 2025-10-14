@@ -24,5 +24,7 @@
 		<item id="media-Merriweather" href="OEBPS/assets/Merriweather-Regular.ttf" media-type="application/x-font-ttf" />
 		<item id="media-NightStillComes" href="OEBPS/assets/NightStillComes.otf" media-type="application/x-font-opentype" />
 		<item id="media-Vegur" href="OEBPS/assets/Vegur-Regular.otf" media-type="application/x-font-opentype" />
-		<item id="media-BlackChancery" href="OEBPS/assets/BlackChancery.ttf" media-type="application/x-font-opentype" />
+		<item id="media-BlackChancery" href="OEBPS/assets/BlackChancery.ttf" media-type="application/x-font-ttf" />
+		<item id="media-JetBrainsMonoRegular" href="OEBPS/assets/JetBrainsMono-Regular.ttf" media-type="application/x-font-ttf" />
+		<item id="media-JetBrainsMonoXBold" href="OEBPS/assets/JetBrainsMono-ExtraBold.ttf" media-type="application/x-font-ttf" />
 	
